@@ -33,5 +33,5 @@ if __name__ == '__main__':
 
     res = [(m.start(0), m.end(0)) for m in re.finditer(r"[0-9]{1,2}\.( )*[0-9]{1,2}\.( )*[0-9]{1,2}", data)]
     with open("res.csv", "w", encoding="utf-8") as f:
-        for i in range(len(res)-1):
-            f.write( data[res[i][1]:res[i+1][1]] + "\n")
+        for i in range(len(res) - 1):
+            f.write(data[res[i][1]:res[i + 1][1]].replace(". ", "", 1) + "\n")
