@@ -4,7 +4,6 @@
     <list default="true" id="5415a0ac-5a1a-4288-8223-62d5d29f67d0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/res.csv" beforeDir="false" afterPath="$PROJECT_DIR$/res.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569518860295</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Хочу перенести строки, которые начинаются не с чисел в предыдущие строки">
+      <created>1569519966357</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1569519966357</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -125,7 +131,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Что-то парсится но есть ошибки" />
     <MESSAGE value="Добавил заметки и попробовал другой патент" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил заметки и попробовал другой патент" />
+    <MESSAGE value="Хочу перенести строки, которые начинаются не с чисел в предыдущие строки" />
+    <option name="LAST_COMMIT_MESSAGE" value="Хочу перенести строки, которые начинаются не с чисел в предыдущие строки" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
