@@ -40,6 +40,10 @@ def extract_text_from_pdf(pdf_path):
 
 if __name__ == '__main__':
     data = extract_text_from_pdf('1.pdf')
+    print(data)
     # res = re.split(r"[0-9]{1,2}\.( )*[0-9]{1,2}\.( )*[0-9]{1,2}", data)
-    res = re.findall(r"[0-9]{1,2}\.( )*[0-9]{1,2}\.( )*[0-9]{1,2}", data)
-    print("awd")
+
+    # res = [(m.start(0), m.end(0)) for m in re.finditer(r"[0-9]{1,2}\.( )*[0-9]{1,2}\.( )*[0-9]{1,2}", data)]
+    #
+    # for i in range(len(res)-1):
+    #     print(data[res[i][1]:res[i+1][1]])
