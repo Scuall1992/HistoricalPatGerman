@@ -1,15 +1,5 @@
 import re
-# import PyPDF2
-#
-# pdfFileObj = open('1.pdf','rb')     #'rb' for read binary mode
-# pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
-#
-#
-# pageObj = pdfReader.getPage(9)          #'9' is the page number
-# print(pageObj.extractText())
-
 import io
-
 from pdfminer.converter import TextConverter
 from pdfminer.pdfinterp import PDFPageInterpreter
 from pdfminer.pdfinterp import PDFResourceManager
@@ -39,11 +29,9 @@ def extract_text_from_pdf(pdf_path):
 
 
 if __name__ == '__main__':
-    data = extract_text_from_pdf('1.pdf')
-    print(data)
-    # res = re.split(r"[0-9]{1,2}\.( )*[0-9]{1,2}\.( )*[0-9]{1,2}", data)
+    data = extract_text_from_pdf('2.pdf')
 
-    # res = [(m.start(0), m.end(0)) for m in re.finditer(r"[0-9]{1,2}\.( )*[0-9]{1,2}\.( )*[0-9]{1,2}", data)]
-    #
-    # for i in range(len(res)-1):
-    #     print(data[res[i][1]:res[i+1][1]])
+    res = [(m.start(0), m.end(0)) for m in re.finditer(r"[0-9]{1,2}\.( )*[0-9]{1,2}\.( )*[0-9]{1,2}", data)]
+    with open("res.csv", "w", encoding="utf-8") as f:
+        for i in range(len(res)-1):
+            f.write( data[res[i][1]:res[i+1][1]] + "\n")
