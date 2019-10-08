@@ -1,5 +1,6 @@
 import re
 import io
+import os
 from pdfminer.converter import TextConverter
 from pdfminer.pdfinterp import PDFPageInterpreter
 from pdfminer.pdfinterp import PDFResourceManager
@@ -35,23 +36,39 @@ def replace_smht(s, what):
 
 
 if __name__ == '__main__':
-    data = extract_text_from_pdf('2.pdf')
+    for i in os.listdir("."):
+        try:
+            if ".pdf" in i:
+                data = extract_text_from_pdf(f'{i}')
 
-    res = [(m.start(0), m.end(0)) for m in re.finditer(r" [0-9]{1,2}\.( )*[0-9]{1,2}\.( )*[0-9]{1,2}", data)]
-    parsed = []
-    with open("res.csv", "w", encoding="utf-8") as f:
-        for i in range(len(res) - 1):
-            parsed.append(data[res[i][1]:res[i + 1][1]].replace(". ", "", 1))
+                res = [(m.start(0), m.end(0)) for m in
+                       re.finditer(r" [0-9]{1,2}\.( )*[0-9]{1,2}\.( )*[0-9]{1,2}", data)]
+                parsed = []
 
-        buf = []
-        for i in range(len(parsed) - 1):
-            if not parsed[i][0].isalpha() and parsed[i][0] != "'":
-                buf.append(parsed[i])
-            else:
-                buf[-1] += f" {parsed[i]}"
+                for i in range(len(res) - 1):
+                    parsed.append(data[res[i][1]:res[i + 1][1]].replace(". ", "", 1))
 
-        what = ["' ", ", ", "^ ", " ", "Patemanmeldungen.",
-                "Patemanmeldungen. ", ".", "»", "!",
-                "Patentllnme ldunge n ", "Patentanmeldungen"
-                ]
-        f.write("\n".join([i if i[0].isdigit() else replace_smht(i, what) for i in buf]))
+                buf = []
+                for i in range(len(parsed) - 1):
+                    if not parsed[i][0].isalpha() and parsed[i][0] != "'":
+                        buf.append(parsed[i])
+                    else:
+                        if len(buf) > 0:
+                            buf[-1] += f" {parsed[i]}"
+                        else:
+                            buf.append(f" {parsed[i]}")
+
+                what = ["' ", ", ", "^ ", " ", "Patemanmeldungen.",
+                        "Patemanmeldungen. ", ".", "»", "!",
+                        "Patentllnme ldunge n ", "Patentanmeldungen"
+                        ]
+
+                with open(f"{i}.csv", "w", encoding="utf-8") as f:
+                    f.write("\n".join([i if i[0].isdigit() else replace_smht(i, what) for i in buf]))
+        except Exception as e:
+            print(i, e)
+
+
+
+#Erteilungen
+#Zurücknahme von Anmeldungen
