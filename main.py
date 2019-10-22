@@ -36,10 +36,10 @@ def replace_smht(s, what):
 
 
 if __name__ == '__main__':
-    for i in os.listdir("."):
+    for file in os.listdir("."):
         try:
-            if ".pdf" in i:
-                data = extract_text_from_pdf(f'{i}')
+            if ".pdf" in file:
+                data = extract_text_from_pdf(f'{file}')
 
                 res = [(m.start(0), m.end(0)) for m in
                        re.finditer(r" [0-9]{1,2}\.( )*[0-9]{1,2}\.( )*[0-9]{1,2}", data)]
@@ -48,25 +48,17 @@ if __name__ == '__main__':
                 for i in range(len(res) - 1):
                     parsed.append(data[res[i][1]:res[i + 1][1]].replace(". ", "", 1))
 
-                buf = []
-                for i in range(len(parsed) - 1):
-                    if not parsed[i][0].isalpha() and parsed[i][0] != "'":
-                        buf.append(parsed[i])
-                    else:
-                        if len(buf) > 0:
-                            buf[-1] += f" {parsed[i]}"
-                        else:
-                            buf.append(f" {parsed[i]}")
+
 
                 what = ["' ", ", ", "^ ", " ", "Patemanmeldungen.",
                         "Patemanmeldungen. ", ".", "»", "!",
                         "Patentllnme ldunge n ", "Patentanmeldungen"
                         ]
 
-                with open(f"{i}.csv", "w", encoding="utf-8") as f:
-                    f.write("\n".join([i if i[0].isdigit() else replace_smht(i, what) for i in buf]))
+                with open(f"{file}.csv", "w", encoding="utf-8") as f:
+                    f.write("\n".join([replace_smht(i, what) for i in buf]))
         except Exception as e:
-            print(i, e)
+            print(file, e)
 
 
 
