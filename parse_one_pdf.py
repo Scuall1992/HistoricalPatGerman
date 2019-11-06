@@ -39,9 +39,9 @@ def replace_smht(s, what):
 if __name__ == '__main__':
     args = argparse.ArgumentParser()
     args.add_argument("filename", type=str)
-
+    #
     file = args.parse_args().filename
-    # file = r"C:\pat\pat_Patentblatt_192545.pdf"
+    # file = r"C:\pat\pat_Patentblatt_192504.pdf"
 
     try:
         if ".pdf" in file:
@@ -52,7 +52,9 @@ if __name__ == '__main__':
             parsed = []
 
             for i in range(len(res) - 1):
-                parsed.append(data[res[i][1]:res[i + 1][1]].replace(". ", "", 1))
+                data = data[:res[i][0]] + data[res[i][0]:res[i][1]].replace(',', '.') + data[res[i][1]:]
+                data = data[:res[i+1][0]] + data[res[i+1][0]:res[i+1][1]].replace(',', '.') + data[res[i+1][1]:]
+                parsed.append(data[res[i][1]:res[i + 1][1]])
 
             # with open("replace_cases") as rep:
             #     for c in rep.read().split("\n"):

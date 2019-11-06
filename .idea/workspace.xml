@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5415a0ac-5a1a-4288-8223-62d5d29f67d0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.py" beforeDir="false" afterPath="$PROJECT_DIR$/check_files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/check_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/check_files.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/replace_cases" beforeDir="false" afterPath="$PROJECT_DIR$/replace_cases" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parallel_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/parallel_run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parse_one_pdf.py" beforeDir="false" afterPath="$PROJECT_DIR$/parse_one_pdf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/split_csv_by_chapters.py" beforeDir="false" afterPath="$PROJECT_DIR$/split_csv_by_chapters.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,10 +35,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="C:/Pardes/1.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\scual\PycharmProjects\untitled" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\scual\PycharmProjects\untitled" />
     </key>
@@ -54,7 +59,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.split_csv_by_chapters">
-    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="123" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -62,11 +67,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="C:/Pardes" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:/Pardes/1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/123.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,9 +168,9 @@
       <list>
         <item itemvalue="Python.split_csv_by_chapters" />
         <item itemvalue="Python.check_files" />
+        <item itemvalue="Python.123" />
         <item itemvalue="Python.parallel_run" />
         <item itemvalue="Python.parse_one_pdf" />
-        <item itemvalue="Python.1" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +220,21 @@
       <option name="project" value="LOCAL" />
       <updated>1570558749994</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Изменил разбивку, в датах есть запятые.&#10;Добавил многопоточность, чтобы быстрее обрабатывать файлы">
+      <created>1571777194997</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571777194997</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Изменил разбивку, в датах есть запятые.&#10;Добавил многопоточность, чтобы быстрее обрабатывать файлы. Добавил файлы">
+      <created>1571777234668</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571777234668</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -240,7 +259,9 @@
     <MESSAGE value="Хочу перенести строки, которые начинаются не с чисел в предыдущие строки" />
     <MESSAGE value="Почистили от мусора и попытались приукрасить" />
     <MESSAGE value="Сделал чтобы прога распарсила все файлы. Добавил скрипт по проверке якорей" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделал чтобы прога распарсила все файлы. Добавил скрипт по проверке якорей" />
+    <MESSAGE value="Изменил разбивку, в датах есть запятые.&#10;Добавил многопоточность, чтобы быстрее обрабатывать файлы" />
+    <MESSAGE value="Изменил разбивку, в датах есть запятые.&#10;Добавил многопоточность, чтобы быстрее обрабатывать файлы. Добавил файлы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменил разбивку, в датах есть запятые.&#10;Добавил многопоточность, чтобы быстрее обрабатывать файлы. Добавил файлы" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -250,17 +271,18 @@
           <line>11</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/split_csv_by_chapters.py</url>
-          <line>26</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="&quot;\n&quot;.join([replace_smht(i, what) for i in buf])" language="Python" />
         <watch expression="not &quot; u9.8.22&quot;[0].isalpha() and &quot; u9.8.22&quot;[0] != &quot;'&quot;" language="Python" />
+        <watch expression="data[:res[0][0]] + data[res[0][0]:res[0][1]] + data[res[0][1]:]" language="Python" />
+        <watch expression="len(data[:res[0][0]] + data[res[0][0]:res[0][1]] + data[res[0][1]:])" language="Python" />
+        <watch expression="len(data)" language="Python" />
+        <watch expression="data[res[i][0]:res[i][1]]" language="Python" />
+        <watch expression="data[res[i][1]:res[i + 1][1]]" language="Python" />
+        <watch expression="data[res[i][1]:res[i + 1][1]]" language="Python" />
       </configuration>
     </watches-manager>
   </component>

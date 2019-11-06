@@ -56,7 +56,7 @@ if __name__ == '__main__':
                         ]
 
                 with open(f"{file}.csv", "w", encoding="utf-8") as f:
-                    f.write("\n".join([replace_smht(i, what) for i in buf]))
+                    f.write("\n".join([replace_smht(i, what) for i in parsed]))
         except Exception as e:
             print(file, e)
 
