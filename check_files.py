@@ -8,7 +8,7 @@ b = "Anmeldungen."
 b2 = "Anmelllungen."
 c = "Löschungen."
 files = []
-FOLDER = "C:\\1926"
+FOLDER = "C:\\19262"
 
 for i in os.listdir(FOLDER):
     if ".csv" in i:

@@ -12,7 +12,7 @@ def run_script(filename):
 #     p.map(run_script, [os.path.join(FOLDER, i) for i in os.listdir(FOLDER)])
 
 if __name__ == '__main__':
-    FOLDER = "C:\\1927"
+    FOLDER = "C:\\19262"
     for i in os.listdir(FOLDER):
         if ".pdf" in i:
             Process(target=run_script, args=(os.path.join(FOLDER, i),)).start()

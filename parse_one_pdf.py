@@ -47,18 +47,25 @@ if __name__ == '__main__':
         if ".pdf" in file:
             data = extract_text_from_pdf(f'{file}')
 
+            with open("replace_cases") as rep:
+                cases = rep.read().split("\n")
+
+                for c in cases:
+                    data = data.replace(*c.split(";"))
+
             res = [(m.start(0), m.end(0)) for m in
-                   re.finditer(r" [0-9]{1,2}(\.|,)( )*[0-9]{1,2}(\.|,)( )*[0-9]{1,2}", data)]
+                   re.finditer(r" [0-9]{1,2}(\.|,| )( )*[0-9]{1,2}(\.| |,)( )*[0-9]{1,2}[^0-9]", data)]
             parsed = []
 
+            # replace dots to comma in date
             for i in range(len(res) - 1):
                 data = data[:res[i][0]] + data[res[i][0]:res[i][1]].replace(',', '.') + data[res[i][1]:]
-                data = data[:res[i+1][0]] + data[res[i+1][0]:res[i+1][1]].replace(',', '.') + data[res[i+1][1]:]
+                data = data[:res[i + 1][0]] + data[res[i + 1][0]:res[i + 1][1]].replace(',', '.') + data[res[i + 1][1]:]
                 parsed.append(data[res[i][1]:res[i + 1][1]])
 
-            # with open("replace_cases") as rep:
-            #     for c in rep.read().split("\n"):
-            #         parsed = [i.replace(*c.split(',')) for i in parsed]
+            for i in range(len(parsed)):
+                if parsed[i][0] == " ":
+                    parsed[i] = parsed[i][1:]
 
             with open(f"{file}.csv", "w", encoding="utf-8") as f:
                 f.write("\n".join(parsed))

@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="5415a0ac-5a1a-4288-8223-62d5d29f67d0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/check_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/check_files.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parallel_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/parallel_run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parse_one_pdf.py" beforeDir="false" afterPath="$PROJECT_DIR$/parse_one_pdf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/replace_cases" beforeDir="false" afterPath="$PROJECT_DIR$/replace_cases" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/split_csv_by_chapters.py" beforeDir="false" afterPath="$PROJECT_DIR$/split_csv_by_chapters.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,10 +42,10 @@
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\scual\PycharmProjects\untitled" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\scual\PycharmProjects\untitled" />
     </key>
   </component>
@@ -101,6 +104,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="clean_csv" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clean_csv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="parallel_run" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -114,27 +138,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parallel_run.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="parse_one_pdf" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parse_one_pdf.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -168,9 +171,9 @@
       <list>
         <item itemvalue="Python.split_csv_by_chapters" />
         <item itemvalue="Python.check_files" />
-        <item itemvalue="Python.123" />
         <item itemvalue="Python.parallel_run" />
-        <item itemvalue="Python.parse_one_pdf" />
+        <item itemvalue="Python.clean_csv" />
+        <item itemvalue="Python.123" />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571777234668</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Получилось распарсить 51 неделю 1926 года часть анмелдумен">
+      <created>1573070365035</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1573070365035</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -261,7 +271,8 @@
     <MESSAGE value="Сделал чтобы прога распарсила все файлы. Добавил скрипт по проверке якорей" />
     <MESSAGE value="Изменил разбивку, в датах есть запятые.&#10;Добавил многопоточность, чтобы быстрее обрабатывать файлы" />
     <MESSAGE value="Изменил разбивку, в датах есть запятые.&#10;Добавил многопоточность, чтобы быстрее обрабатывать файлы. Добавил файлы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменил разбивку, в датах есть запятые.&#10;Добавил многопоточность, чтобы быстрее обрабатывать файлы. Добавил файлы" />
+    <MESSAGE value="Получилось распарсить 51 неделю 1926 года часть анмелдумен" />
+    <option name="LAST_COMMIT_MESSAGE" value="Получилось распарсить 51 неделю 1926 года часть анмелдумен" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -271,18 +282,35 @@
           <line>11</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/split_csv_by_chapters.py</url>
+          <line>98</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/split_csv_by_chapters.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="builtins.MemoryError">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+          <option name="timeStamp" value="19" />
+        </breakpoint>
+        <breakpoint enabled="true" type="python-exception">
+          <properties notifyOnTerminate="true" exception="builtins.IndexError">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+          <option name="timeStamp" value="20" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="&quot;\n&quot;.join([replace_smht(i, what) for i in buf])" language="Python" />
-        <watch expression="not &quot; u9.8.22&quot;[0].isalpha() and &quot; u9.8.22&quot;[0] != &quot;'&quot;" language="Python" />
-        <watch expression="data[:res[0][0]] + data[res[0][0]:res[0][1]] + data[res[0][1]:]" language="Python" />
-        <watch expression="len(data[:res[0][0]] + data[res[0][0]:res[0][1]] + data[res[0][1]:])" language="Python" />
-        <watch expression="len(data)" language="Python" />
-        <watch expression="data[res[i][0]:res[i][1]]" language="Python" />
-        <watch expression="data[res[i][1]:res[i + 1][1]]" language="Python" />
-        <watch expression="data[res[i][1]:res[i + 1][1]]" language="Python" />
+        <watch expression="len(anmel[i])" language="Python" />
+        <watch expression="anmel[i]" language="Python" />
+        <watch expression="re.search(r'[0-9]{3}(\.|,)', anmel[i])" language="Python" />
       </configuration>
     </watches-manager>
   </component>
