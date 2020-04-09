@@ -3,7 +3,7 @@ import os
 
 
 def run_script(filename):
-    os.system(f"python C:\\Users\\scual\\PycharmProjects\\untitled\\parse_one_pdf.py {filename}")
+    os.system(f"python C:\\Users\\Maria\\PycharmProjects\\untitled\\parse_one_pdf.py {filename}")
 
 
 # if __name__ == '__main__':
