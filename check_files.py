@@ -1,21 +1,29 @@
 import os
 
 # a = "ilungen"
-a = "Erteilungen."
-a2 = "Erteilungen/"
-a3 = "Versagungen."
-b = "Anmeldungen."
-b2 = "Anmelllungen."
+a = ["Erteilungen.", "Erteilungen/", "Versagungen.", "Erteilungen*)"]
+
+
+b = ["Anmeldungen.", "Anmelllungen."]
+
 c = "Löschungen."
 files = []
-FOLDER = "C:\\19262"
+
+
+
+import argparse
+args = argparse.ArgumentParser()
+args.add_argument("filename", type=str)
+#
+FOLDER = args.parse_args().filename
+
 
 for i in os.listdir(FOLDER):
     if ".csv" in i:
         with open(os.path.join(FOLDER, i), encoding="utf-8") as f:
             data = f.read()
 
-        if (data.count(a) == 1 or data.count(a2) == 1 or data.count(a3) == 1) and (data.count(b) == 1 or data.count(b2) == 1 ):
+        if any([data.count(i) == 1 for i in a]) and any([data.count(i) == 1 for i in b]):
             files.append(i)
         # if data.count(a) == 1 and data.count(b) == 1 and data.count(c) >= 1:
         #     files.append(i)

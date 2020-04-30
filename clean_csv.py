@@ -1,6 +1,10 @@
 import os
 
-FOLDER = "C:\\19262"
+import argparse
+args = argparse.ArgumentParser()
+args.add_argument("filename", type=str)
+#
+FOLDER = args.parse_args().filename
 
 lines = []
 

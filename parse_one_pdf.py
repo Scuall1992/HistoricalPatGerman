@@ -41,7 +41,7 @@ if __name__ == '__main__':
     args.add_argument("filename", type=str)
     #
     file = args.parse_args().filename
-    # file = r"C:\pat\pat_Patentblatt_192504.pdf"
+    # file = 'C:\\Users\\Maria\\Dropbox\\historical German patents\\1925\\pat_Patentblatt_192501.pdf'
 
     try:
         if ".pdf" in file:

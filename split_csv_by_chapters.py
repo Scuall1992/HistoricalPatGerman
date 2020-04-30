@@ -18,7 +18,13 @@ def replace_smht(s, what):
 with open("replace_cases", encoding="utf-8") as g:
     cases = g.read().split("\n")
 
-FOLDER = "C:\\19262"
+import argparse
+args = argparse.ArgumentParser()
+args.add_argument("filename", type=str)
+#
+FOLDER = args.parse_args().filename
+
+
 with open("files.txt", encoding="utf-8") as f:
     for file in f.read().split():
         with open(os.path.join(FOLDER, file), encoding="utf-8") as g:
