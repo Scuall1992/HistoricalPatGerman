@@ -1,5 +1,4 @@
 Aach
-Aach
 Aachen
 Aachen-Frankenberg
 Aachener Reich Aachen
@@ -51,7 +50,6 @@ Adelmannsfelden
 Adelschlag
 Adelsdorf
 Adelsheim
-Adelshofen
 Adelshofen
 Adelsreute
 Adelsreuth
@@ -106,7 +104,6 @@ Ahnsbeck
 Ahnsen
 Aholfing
 Aholming
-Ahorn
 Ahorn
 Ahorntal
 Ahrbrück
@@ -164,7 +161,6 @@ Albbruck
 Albeck
 Albegouwe
 Albersdorf
-Albersdorf
 Albersfeld
 Albershausen
 Albersweiler
@@ -211,8 +207,6 @@ Alkersum
 Alkmaar
 Allenbach
 Allendorf
-Allendorf
-Allendorf
 Allendorf (Lumda)
 Allenfeld
 Allensbach
@@ -252,8 +246,6 @@ Alsbach
 Alsbach-Hähnlein
 Alschhausen
 Alsdorf
-Alsdorf
-Alsdorf
 Alsen
 Alsenborn
 Alsenz
@@ -283,9 +275,6 @@ Altbruchhausen
 Altbunzlau
 Altburg
 Altdorf
-Altdorf
-Altdorf
-Altdorf
 Altdorf bei Nürnberg
 Altdöbern
 Alteburg
@@ -314,7 +303,6 @@ Altenburg
 Altenbuseck
 Altendiez
 Altendorf
-Altendorf
 Altenfeld
 Altenglan
 Altengleichen
@@ -325,11 +313,9 @@ Altenhasslau
 Altenhausen
 Altenheim
 Altenhof
-Altenhof
 Altenhofen
 Altenholz
 Altenhöfen
-Altenkirchen
 Altenkirchen
 Altenkirchen (Westerwald)
 Altenkrempe
@@ -344,8 +330,6 @@ Altenpleen
 Altenriet
 Altenschlirf
 Altenschönbach
-Altenstadt
-Altenstadt
 Altenstadt
 Altenstadt an der Waldnaab
 Altensteig
@@ -366,7 +350,6 @@ Altgeringaland
 Altgouwe
 Althausen
 Althegnenberg
-Altheim
 Altheim
 Altheim (Alb)
 Althengstett
@@ -431,7 +414,6 @@ Am Salzhaff
 Amalfi
 Amance
 Amavorum
-Amberg
 Amberg
 Amberga
 Amblise
@@ -648,7 +630,6 @@ Arnshöfen
 Arnstadt
 Arnstedt
 Arnstein
-Arnstein
 Arnstein-Endorf
 Arnstein-Lindow-Ruppin
 Arnstein-Ruppin
@@ -668,11 +649,9 @@ Artner
 Artois
 Arzbach
 Arzberg
-Arzberg
 Arzfeld
 Arzheim
 Arzt
-Asbach
 Asbach
 Asbach-Bäumenheim
 Asbach-Sickenberg
@@ -687,7 +666,6 @@ Aschau im Chiemgau
 Aschbach
 Aschborn
 Ascheberg
-Ascheberg
 Ascheffel
 Aschendorf
 Aschenhausen
@@ -697,7 +675,6 @@ Aschersleben
 Aschfeld
 Aschhausen
 Aschheim
-Asendorf
 Asendorf
 Ashton-on-Mersey
 Askanien
@@ -768,7 +745,6 @@ Auengrund
 Auenwald
 Auer von Au
 Auer von Herrenkirchen
-Auerbach
 Auerbach
 Auerbach in der Oberpfalz
 Auerbach/Vogtland
@@ -852,10 +828,8 @@ Baabe
 Baach
 Baal b. Linden Ruhr
 Baar
-Baar
 Baar-Ebenhausen
 Babenberger
-Babenhausen
 Babenhausen
 Babensham
 Babonen
@@ -1010,7 +984,6 @@ Bad Tabarz
 Bad Teinach-Zavelstein
 Bad Tennstedt
 Bad Tölz
-Bad Tölz
 Bad Urach
 Bad Vilbel
 Bad Waldsee
@@ -1148,7 +1121,6 @@ Bargfeld-Stegen
 Bargischow
 Bargstall
 Bargstedt
-Bargstedt
 Bargteheide
 Bargum
 Barille
@@ -1192,7 +1164,6 @@ Bartholomä
 Bartholomäi
 Bartow
 Barum
-Barum
 Baruth
 Baruth/Mark
 Barver
@@ -1203,7 +1174,6 @@ Bas. Rhin
 Basalgouwe
 Basberg
 Basdahl
-Basedow
 Basedow
 Basel
 Basel-Landschaft
@@ -1229,7 +1199,6 @@ Bauer von Eiseneck
 Bauer von Heppenstein
 Bauerbach
 Bauland
-Bauler
 Bauler
 Baum von Baumsdorf
 Baumgarten
@@ -1283,7 +1252,6 @@ Becheln
 Bechenheim
 Becherbach
 Becherbach bei Kirn
-Bechhofen
 Bechhofen
 Bechingen
 Bechstedt
@@ -1347,7 +1315,6 @@ Beilingen
 Beilngries
 Beilrode
 Beilstein
-Beilstein
 Beimerstetten
 Beindersheim
 Beinerstadt
@@ -1392,7 +1359,6 @@ Bendern
 Bendestorf
 Bendfeld
 Bendorf
-Bendorf
 Beneckenstein
 Benediktbeuern
 Benekendorf
@@ -1427,7 +1393,6 @@ Bentwisch
 Bentzel zu Sternau
 Bentzin
 Benz
-Benz
 Benzenau
 Benzweiler
 Beratzhausen
@@ -1442,10 +1407,6 @@ Berenbach
 Berenberg
 Berenrode
 Berg
-Berg
-Berg
-Berg
-Berg
 Berg (Pfalz)
 Berg b.Neumarkt i.d.OPf.
 Berg im Gau
@@ -1458,14 +1419,9 @@ Bergamo
 Bergatreute
 Bergau
 Berge
-Berge
 Bergedorf
 Bergel
 Bergell
-Bergen
-Bergen
-Bergen
-Bergen
 Bergen
 Bergen an der Dumme
 Bergen auf Rügen
@@ -1478,7 +1434,6 @@ Bergewöhrden
 Bergfeld
 Berghaupten
 Berghausen
-Bergheim
 Bergheim
 Berghes
 Bergholz
@@ -1619,7 +1574,6 @@ Bernried
 Bernried am Starnberger See
 Bernroth
 Bernsdorf
-Bernsdorf
 Bernshausen
 Bernstadt
 Bernstadt auf dem Eigen
@@ -1698,7 +1652,6 @@ Beulich
 Beulwitz
 Beurath
 Beuren
-Beuren
 Beuren (Hochwald)
 Beuron
 Beutelsbach
@@ -1706,7 +1659,6 @@ Beuthen
 Beuthen-Cosel
 Beveland
 Bevergern
-Bevern
 Bevern
 Beverstedt
 Beverungen
@@ -1736,7 +1688,6 @@ Bibrach
 Biburg
 Bichl
 Bicken
-Bickenbach
 Bickenbach
 Bickendorf
 Bidembach von Treuenfels
@@ -1832,8 +1783,6 @@ Birken-Honigsessen
 Birkenau
 Birkenbeul
 Birkenfeld
-Birkenfeld
-Birkenfeld
 Birkenfelde
 Birkenfels
 Birkenheide
@@ -1907,7 +1856,6 @@ Blanche
 Blankenbach
 Blankenberg
 Blankenburg
-Blankenburg
 Blankenburg-Heimburg
 Blankenburg-Regenstein
 Blankenese
@@ -1916,13 +1864,11 @@ Blankenfels
 Blankenhagen
 Blankenhain
 Blankenheim
-Blankenheim
 Blankenheim-Gerolstein
 Blankenheim-Kasselberg
 Blankenhof
 Blankenhorn
 Blankenrath
-Blankensee
 Blankensee
 Blankenstein
 Blarer von Wartensee
@@ -1959,7 +1905,6 @@ Blindheim
 Blittersdorf
 Blitzenreute
 Blois
-Blomberg
 Blomberg
 Blomesche Wildnis
 Bloomington
@@ -2006,7 +1951,6 @@ Bockenau
 Bockenem
 Bockenheim
 Bockenheim an der Weinstraße
-Bockhorn
 Bockhorn
 Bockhorst
 Bockschaft
@@ -2061,7 +2005,6 @@ Boizenburg
 Boizenburg/Elbe
 Boke
 Bokel
-Bokel
 Bokeloh
 Bokelrehm
 Bokensdorf
@@ -2105,8 +2048,6 @@ Bonstetten
 Boock
 Boofzheim
 Boos
-Boos
-Boos
 Boos von Waldeck
 Boos von Waldeck und Montfort
 Boostedt
@@ -2133,7 +2074,6 @@ Borhtergo
 Borié
 Bork i. W.
 Borken
-Borken
 Borkheide
 Borkow
 Borkulo
@@ -2146,8 +2086,6 @@ Borna
 Borne
 Bornhagen
 Bornheim
-Bornheim
-Bornheim
 Bornheimerberg
 Bornholt
 Bornhöved
@@ -2158,7 +2096,6 @@ Borod
 Borrentin
 Borsdorf
 Borsfleth
-Borstel
 Borstel
 Borstel-Hohenraden
 Borstingen
@@ -2198,7 +2135,6 @@ Bouwinghausen
 Bovenau
 Bovenden
 Bovenjadingen
-Boxberg
 Boxberg
 Boxberg/O.L. - Hamor
 Boxmer
@@ -2251,7 +2187,6 @@ Brandenburger zu Riet
 Brandenstein
 Branders
 Brandis
-Brandscheid
 Brandscheid
 Brandt
 Brannenburg
@@ -2330,8 +2265,6 @@ Breitenbach
 Breitenbach am Herzberg
 Breitenbauch
 Breitenberg
-Breitenberg
-Breitenbrunn
 Breitenbrunn
 Breitenbrunn/Erzgebirge
 Breitenbuch
@@ -2344,13 +2277,10 @@ Breitenheim
 Breitenlohe
 Breitenstein
 Breitenthal
-Breitenthal
 Breitenworbis
 Breitingen
 Breitlandenburg
 Breitnau
-Breitscheid
-Breitscheid
 Breitscheid
 Breitscheidt
 Breitschwert
@@ -2501,7 +2431,6 @@ Bruchweiler-Bärenbach
 Bruck
 Bruck i.d.OPf.
 Bruckberg
-Bruckberg
 Bruckmühl
 Brugg
 Bruggen
@@ -2509,7 +2438,6 @@ Brumath
 Bruneck
 Brunengeruuz
 Bruningerode
-Brunn
 Brunn
 Brunnen
 Brunnstatt
@@ -2545,7 +2473,6 @@ Brüel
 Brügge
 Brüggen
 Brühl
-Brühl
 Brühlhof-Kirchen
 Brünen
 Brünn
@@ -2559,7 +2486,6 @@ Bube
 Bubenbad
 Bubenhausen
 Bubenheim
-Bubenheim
 Bubenhofen
 Bubenreuth
 Bubesheim
@@ -2567,8 +2493,6 @@ Bublitz
 Buborn
 Bubsheim
 Bucarest
-Buch
-Buch
 Buch
 Buch am Buchrain
 Buch am Erlbach
@@ -2592,9 +2516,6 @@ Buchfart
 Buchheim
 Buchhofen
 Buchholz
-Buchholz
-Buchholz
-Buchholz
 Buchholz (Aller)
 Buchholz (Westerwald)
 Buchholz in der Nordheide
@@ -2610,7 +2531,6 @@ Bucki
 Buckow
 Budapest
 Budenbach
-Budenheim
 Budenheim
 Budissin
 Budweis
@@ -2644,11 +2564,9 @@ Bunzlau
 Buochs
 Buol
 Burbach
-Burbach
 Burcharde
 Burchardinger
 Burdian
-Burg
 Burg
 Burg (Dithmarschen)
 Burg (Mosel)
@@ -2661,9 +2579,7 @@ Burgberg i.Allgäu
 Burgbernheim
 Burgbrohl
 Burgdorf
-Burgdorf
 Burgebrach
-Burgen
 Burgen
 Burgenland
 Burger
@@ -2761,7 +2677,6 @@ Butzbach
 Butzow
 Buwinghausen
 Buxheim
-Buxheim
 Buxtehude
 Buß
 Bußmannshausen
@@ -2774,7 +2689,6 @@ Bächingen a.d.Brenz
 Bächlingen
 Bäk
 Bälau
-Bärenbach
 Bärenbach
 Bärenfeld
 Bärenrode
@@ -2850,7 +2764,6 @@ Böttingen
 Bötzingen
 Böxlund
 Bößleben
-Büchel
 Büchel
 Büchelborn
 Büchen
@@ -3259,8 +3172,6 @@ Daglfing
 Dagsburg
 Dagstuhl
 Dahlem
-Dahlem
-Dahlem
 Dahlen
 Dahlenburg
 Dahlerbrück
@@ -3354,7 +3265,6 @@ Dattenried
 Datzeroth
 Datzetal
 Daubach
-Daubach
 Daubensand
 Dauberg
 Dauchingen
@@ -3434,7 +3344,6 @@ Demmingen
 Den Haag
 Deneuvre
 Denkendorf
-Denkendorf
 Denkingen
 Denklingen
 Denkte
@@ -3456,7 +3365,6 @@ Derkum
 Derlingo
 Dermbach
 Dernau
-Dernbach
 Dernbach
 Dernbach (Westerwald)
 Derne
@@ -3696,7 +3604,6 @@ Dohna-Glodin
 Dohna-Wartenberg
 Dohr
 Dohren
-Dohren
 Dolberg
 Dolgen am See
 Dolgesheim
@@ -3783,8 +3690,6 @@ Drachsdorff
 Drachselsried
 Drackenstein
 Drage
-Drage
-Drage
 Dragini
 Dragun
 Draheim
@@ -3805,7 +3710,6 @@ Drechow
 Drechsel
 Drechsel von Deufstetten
 Drees
-Dreetz
 Dreetz
 Dreggers
 Drehna
@@ -3971,7 +3875,6 @@ Dürmentingen
 Dürn
 Dürn zu Riedsberg
 Dürnau
-Dürnau
 Dürnstein
 Dürnwang
 Dürrenhardt
@@ -4056,7 +3959,6 @@ Ebsdorfergrund
 Ebstorf
 Echallens
 Echem
-Eching
 Eching
 Eching am Ammersee
 Echter
@@ -4169,7 +4071,6 @@ Ehenweyer
 Ehester
 Ehestetten
 Ehingen
-Ehingen
 Ehingen (Donau)
 Ehingen a.Ries
 Ehinger
@@ -4181,7 +4082,6 @@ Ehnheim
 Ehningen
 Ehr
 Ehra-Lessien
-Ehrenberg
 Ehrenberg
 Ehrenburg
 Ehrenfels
@@ -4209,7 +4109,6 @@ Eichelshof
 Eichen
 Eichenau
 Eichenbach
-Eichenberg
 Eichenberg
 Eichenbühl
 Eichendorf
@@ -4259,7 +4158,6 @@ Einersheim
 Einfeld
 Einhaus
 Einhausen
-Einhausen
 Einig
 Einrich
 Einselthum
@@ -4276,9 +4174,7 @@ Eisdorf
 Eiselfing
 Eiselstein
 Eisenach
-Eisenach
 Eisenbach
-Eisenberg
 Eisenberg
 Eisenberg (Pfalz)
 Eisenbrechtshofen
@@ -4292,7 +4188,6 @@ Eisenstadt
 Eisfeld
 Eishausen
 Eisighofen
-Eisingen
 Eisingen
 Eisleben
 Eislingen
@@ -4345,7 +4240,6 @@ Ellar
 Elleben
 Ellefeld
 Ellenberg
-Ellenberg
 Ellenhausen
 Ellenhofen
 Ellenz-Poltersdorf
@@ -4378,8 +4272,6 @@ Ellzee
 Elm
 Elmar
 Elmenhorst
-Elmenhorst
-Elmenhorst
 Elmenhorst/Lichtenhagen
 Elmira
 Elmpt
@@ -4393,7 +4285,6 @@ Elsass und Burgund
 Elsass-Lothringen
 Elsass-Schwaben-Burgund
 Elsaß
-Elsdorf
 Elsdorf
 Elsdorf-Westermühlen
 Elsendorf
@@ -4415,7 +4306,6 @@ Elsterheide - Halštrowska Hola
 Elstern
 Elstertrebnitz
 Elsterwerda
-Elsterwerda
 Elstra
 Elstra - Halštrow
 Elstra i Sa
@@ -4432,7 +4322,6 @@ Eltz
 Eltz-Langenau
 Eltz-Pyrmont
 Eltz-Rübenach
-Elxleben
 Elxleben
 Elz
 Elzach
@@ -4461,7 +4350,6 @@ Emmendorf
 Emmendorf b
 Emmerich
 Emmerich am Rhein
-Emmering
 Emmering
 Emmeringen
 Emmersdorf
@@ -4570,8 +4458,6 @@ Eppstein-Königstein
 Eppstein-Münzenberg
 Erb
 Erbach
-Erbach
-Erbach
 Erbach-Erbach
 Erbach-Fürstenau
 Erbach-Michelstadt
@@ -4678,11 +4564,8 @@ Erzhausen
 Esbachsgraben
 Esbjerg
 Esch
-Esch
 Eschach
 Eschau
-Eschbach
-Eschbach
 Eschbach
 Eschborn
 Eschbronn
@@ -4740,7 +4623,6 @@ Essenheim
 Essex UK
 Essing
 Essingen
-Essingen
 Esslingen
 Esslingen am Neckar
 Essonnes
@@ -4753,7 +4635,6 @@ Esterwegen
 Esthal
 Esthen
 Estland
-Estorf
 Estorf
 Etalle
 Etgert
@@ -4778,7 +4659,6 @@ Ettinghausen
 Ettingshausen
 Ettlingen
 Ettringen
-Ettringen
 Etzbach
 Etzelwang
 Etzenricht
@@ -4795,7 +4675,6 @@ Eulgem
 Eulner
 Eupen
 Eupen und Malmedy
-Eurasburg
 Eurasburg
 Euscheid
 Euskirchen
@@ -4850,8 +4729,6 @@ Falhovarii
 Falken
 Falkenau a. b. Eger
 Falkenberg
-Falkenberg
-Falkenberg
 Falkenberg/Elster
 Falkenburg
 Falkenfels
@@ -4861,7 +4738,6 @@ Falkenhausen
 Falkenhayn
 Falkensee
 Falkensee b. Spandau
-Falkenstein
 Falkenstein
 Falkenstein i
 Falkenstein/Harz
@@ -4920,7 +4796,6 @@ Felde
 Feldhausen
 Feldhorst
 Feldkirch
-Feldkirchen
 Feldkirchen
 Feldkirchen-Westerham
 Feldsberg
@@ -5004,7 +4879,6 @@ Firrel
 Fisch
 Fischach
 Fischbach
-Fischbach
 Fischbach bei Dahn
 Fischbach-Oberraden
 Fischbachau
@@ -5085,14 +4959,12 @@ Fontenay-sous-Bois
 Forbach
 Forcalquier
 Forchheim
-Forchheim
 Forchtenberg
 Forchtenstein
 Forheim
 Fork
 Formbach
 Formbach-Pitten
-Forst
 Forst
 Forst (Eifel)
 Forst (Hunsrück)
@@ -5247,8 +5119,6 @@ Frestedt
 Frettenheim
 Fretterode
 Freudenberg
-Freudenberg
-Freudenberg
 Freudenburg
 Freudenegg
 Freudenstadt
@@ -5296,11 +5166,8 @@ Friedenshütte
 Friedenweiler
 Friedersdorf
 Friedewald
-Friedewald
 Friedewalde-Cawallen
 Friedingen
-Friedland
-Friedland
 Friedland
 Friedrich-Wilhelm-Lübke-Koog
 Friedrichroda
@@ -5327,7 +5194,6 @@ Fries
 Friesach
 Friesack
 Friesenhagen
-Friesenheim
 Friesenheim
 Friesenried
 Friesland
@@ -5394,7 +5260,6 @@ Fugger-Mickhausen
 Fugger-Nordendorf
 Fugger-Wasserburg
 Fuhlendorf
-Fuhlendorf
 Fuhlenhagen
 Fulc-Este
 Fulda
@@ -5441,7 +5306,6 @@ Fürstenwalde
 Fürstenwalde/Spree
 Fürstenwärther
 Fürstenzell
-Fürth
 Fürth
 Fürth im Odenwald
 Fürthen
@@ -5591,7 +5455,6 @@ Geestemünde
 Geesthacht
 Geestland
 Gefell
-Gefell
 Gefrees
 Gehaus
 Gehlert
@@ -5669,8 +5532,6 @@ Gemmingen-Hornstein
 Gemmrigheim
 Gemünd
 Gemünden
-Gemünden
-Gemünden
 Gemünden (Felda)
 Gemünden am Main
 Genderkingen
@@ -5697,7 +5558,6 @@ Georgswalde
 Gera
 Gera-Reuß
 Gerabronn
-Gerach
 Gerach
 Geradstetten
 Geratal
@@ -5729,7 +5589,6 @@ Gernrode
 Gernsbach
 Gernsbach i. Bad.
 Gernsheim
-Geroda
 Geroda
 Gerode
 Geroldseck
@@ -5865,7 +5724,6 @@ Glasewitz
 Glasgow
 Glashütte
 Glashütten
-Glashütten
 Glasin
 Glasow
 Glatt
@@ -5960,7 +5818,6 @@ Gollachgau
 Gollachostheim
 Gollen
 Gollenberg
-Gollenberg
 Gollenfels
 Gollhofen
 Gollnow i. Pom.
@@ -5968,7 +5825,6 @@ Golmbach
 Golmsdorf
 Golnitz
 Golsen
-Golzow
 Golzow
 Golßen
 Gomadingen
@@ -6039,7 +5895,6 @@ Goßmannsdorf
 Graach an der Mosel
 Graal-Müritz
 Grabau
-Grabau
 Graben
 Graben-Neudorf
 Grabenhof
@@ -6051,7 +5906,6 @@ Grabowhöfe
 Gracht
 Gradiska
 Graebnitzfelde
-Grafenau
 Grafenau
 Grafenberg
 Grafenbruch
@@ -6075,7 +5929,6 @@ Graisbach
 Graitschen bei Bürgel
 Grambek
 Grambin
-Grambow
 Grambow
 Grammendorf
 Grammentin
@@ -6145,7 +5998,6 @@ Greiffenstein
 Greifswald
 Greiling
 Greimerath
-Greimerath
 Greimersburg
 Grein
 Greinau
@@ -6177,7 +6029,6 @@ Greuth
 Greußen
 Greußenheim
 Grevelingen
-Greven
 Greven
 Grevenbroich
 Grevenkop
@@ -6230,7 +6081,6 @@ Grolach
 Grolsheim
 Grombach
 Grona
-Gronau
 Gronau
 Groningen
 Groningerland
@@ -6297,7 +6147,6 @@ Groß Wüstenfelde
 Groß von Trockau
 Groß-Berlin
 Groß-Bieberau
-Groß-Gerau
 Groß-Gerau
 Groß-Kunzendorf
 Groß-Küris
@@ -6490,7 +6339,6 @@ Grüningen
 Grüningen-Landau
 Grünkraut
 Grünow
-Grünow
 Grünrod
 Grünsfeld
 Grünstadt
@@ -6529,7 +6377,6 @@ Gumppenberg
 Gumtow
 Gundelfingen
 Gundelfingen a.d.Donau
-Gundelsheim
 Gundelsheim
 Gunderath
 Gundersheim
@@ -6596,7 +6443,6 @@ Göhl
 Göhlen
 Göhrde
 Göhren
-Göhren
 Göhren-Lebbin
 Göldenitz
 Gölenkamp
@@ -6607,7 +6453,6 @@ Gölling
 Göllnitz
 Göllsdorf
 Gönnebek
-Gönnersdorf
 Gönnersdorf
 Gönnheim
 Göpfersdorf
@@ -6653,7 +6498,6 @@ Güllesheim
 Güls
 Gültlingen
 Gültz
-Gülzow
 Gülzow
 Gülzow-Prüzen
 Gündelhart
@@ -6746,7 +6590,6 @@ Hage
 Hagedorn
 Hagelstadt
 Hagen
-Hagen
 Hagen am Teutoburger Wald
 Hagen im Bremischen
 Hagen zur Motten
@@ -6774,7 +6617,6 @@ Hahnheim
 Hahnstätten
 Hahnweiler
 Haibach
-Haibach
 Haideneck
 Haider
 Haidmühle
@@ -6799,7 +6641,6 @@ Hainewalde
 Hainfeld
 Hainhausen
 Hainichen
-Hainichen
 Hainsfarth
 Hainspitz
 Hainstadt
@@ -6820,7 +6661,6 @@ Haldenhof
 Haldensleben
 Haldenstein
 Haldenwang
-Haldenwang
 Haldermannstetten
 Haldern
 Halenbeck-Rohlsdorf
@@ -6830,7 +6670,6 @@ Hall
 Hallberg
 Hallbergmoos
 Hallburg
-Halle
 Halle
 Halle (Saale)
 Halle (Westf.)
@@ -6890,15 +6729,12 @@ Hamdorf
 Hameln
 Hamersen
 Hamfelde
-Hamfelde
 Hamilton
 Hamilton Neu-Seeland
-Hamm
 Hamm
 Hamm (Sieg)
 Hamm am Rhein
 Hammah
-Hammelburg
 Hammelburg
 Hammelwarden
 Hammer a.d. Uecker
@@ -6943,7 +6779,6 @@ Hanroth
 Hansburg
 Hanshagen
 Hanstedt
-Hanstedt
 Hanstein
 Hanswalde i. Ostpr
 Hansweert
@@ -6968,7 +6803,6 @@ Hardert
 Hardheim
 Hardisleben
 Hardt
-Hardt
 Hardter Holz
 Hardthausen am Kocher
 Haren (Ems)
@@ -6979,7 +6813,6 @@ Harheim
 Harling
 Harlingerland
 Harmersbach
-Harmsdorf
 Harmsdorf
 Harmstorf
 Harpstedt
@@ -7005,7 +6838,6 @@ Harteneck
 Hartenfels
 Hartenholm
 Hartenstein
-Hartenstein
 Hartershausen
 Harteshusa
 Hartford
@@ -7019,8 +6851,6 @@ Hartig
 Hartingen
 Hartingshausen
 Hartlanden
-Hartmannsdorf
-Hartmannsdorf
 Hartmannsdorf
 Hartmannsdorf bei Kirchberg
 Hartmannsdorf-Reichenau
@@ -7042,7 +6872,6 @@ Haschbach am Remigiusberg
 Hasegau
 Hasel
 Haselau
-Haselbach
 Haselbach
 Haselbachtal
 Haseldorf
@@ -7071,7 +6900,6 @@ Hassegau
 Hassel
 Hassel (Weser)
 Hasselbach
-Hasselbach
 Hasselberg
 Hasselhecke
 Hasselhof
@@ -7085,7 +6913,6 @@ Hassloch
 Haste
 Hastenbeck
 Hatten
-Hattenhofen
 Hattenhofen
 Hattenhuntari
 Hatteri
@@ -7123,10 +6950,6 @@ Hausach
 Hausbay
 Hausberge
 Hausdorf
-Hausen
-Hausen
-Hausen
-Hausen
 Hausen
 Hausen (Wied)
 Hausen am Bussen
@@ -7203,7 +7026,6 @@ Hedingen
 Hedingshausen
 Hedwigenkoog
 Heede
-Heede
 Heek
 Heemsen
 Heemstebe
@@ -7228,12 +7050,9 @@ Heideblick
 Heideck
 Heidekamp
 Heideland
-Heideland
-Heidelberg
 Heidelberg
 Heidelsheim
 Heiden
-Heidenau
 Heidenau
 Heidenau a. d. Sieg
 Heidenburg
@@ -7278,7 +7097,6 @@ Heilsbronn
 Heilshoop
 Heilsperg
 Heimbach
-Heimbach
 Heimborn
 Heimbuchenthal
 Heimendorf
@@ -7297,7 +7115,6 @@ Heine
 Heine i. W.
 Heinersbrück
 Heinersreuth
-Heiningen
 Heiningen
 Heinkenborstel
 Heinold
@@ -7384,7 +7201,6 @@ Hemmersheim
 Hemmerueldun
 Hemmessen
 Hemmingen
-Hemmingen
 Hemmingstedt
 Hemmoor
 Hemsbach
@@ -7422,7 +7238,6 @@ Hennersdorf
 Hennigerode
 Hennigsdorf
 Hennstedt
-Hennstedt
 Hennweiler
 Henschleben
 Henschtal
@@ -7447,7 +7262,6 @@ Herbitzheim
 Herbolsthal
 Herbolzheim
 Herbore
-Herborn
 Herborn
 Herbrechtingen
 Herbsleben
@@ -7484,7 +7298,6 @@ Hergisdorf
 Heringen
 Heringen/Helme
 Heringsdorf
-Heringsdorf
 Herisau
 Herisem
 Herkheim
@@ -7501,7 +7314,6 @@ Hermentingen
 Hermersberg
 Hermeskeil
 Hermetschwil
-Hermsdorf
 Hermsdorf
 Hermsdorf/Erzgebirge
 Herne
@@ -7684,7 +7496,6 @@ Hiller
 Hillerse
 Hillersleben
 Hillesheim
-Hillesheim
 Hillgroven
 Hillscheid
 Hilpersdorf
@@ -7740,11 +7551,8 @@ Hirschaid
 Hirschau
 Hirschbach
 Hirschberg
-Hirschberg
 Hirschberg an der Bergstraße
 Hirschberg i. Schles.
-Hirschfeld
-Hirschfeld
 Hirschfeld
 Hirschfeld (Hunsrück)
 Hirschhorn
@@ -7771,7 +7579,6 @@ Hochberg zu Fürstenstein
 Hochborn
 Hochburgund
 Hochdonn
-Hochdorf
 Hochdorf
 Hochdorf-Assenheim
 Hochemmerich-Nicderrhein
@@ -7809,12 +7616,10 @@ Hoennepel
 Hoerde i. W.
 Hoevelaken
 Hof
-Hof
 Hofbieber
 Hofen
 Hofer von Lobenstein
 Hoff
-Hoffeld
 Hoffeld
 Hoffenheim
 Hofgeismar
@@ -7822,7 +7627,6 @@ Hofheim am Taunus
 Hofheim in Unterfranken
 Hofkirchen
 Hofsteinach
-Hofstetten
 Hofstetten
 Hofstätten
 Hofwart von Kirchheim
@@ -7866,11 +7670,7 @@ Hohenems-Vaduz
 Hoheneppan
 Hohenfeld
 Hohenfelde
-Hohenfelde
-Hohenfelde
-Hohenfelde
 Hohenfelden
-Hohenfels
 Hohenfels
 Hohenfels-Essingen
 Hohenfinow
@@ -7886,7 +7686,6 @@ Hohenhewen
 Hohenholte
 Hohenhorn
 Hohenkammer
-Hohenkirchen
 Hohenkirchen
 Hohenkottenheim
 Hohenkrähen
@@ -7937,8 +7736,6 @@ Hohenstadt
 Hohenstaufen
 Hohensteg
 Hohenstein
-Hohenstein
-Hohenstein
 Hohenstein-Ernstthal
 Hohenstoffeln
 Hohentann
@@ -7986,7 +7783,6 @@ Holach
 Holdermann von Holderstein
 Holdinghausen
 Holdorf
-Holdorf
 Holenberg
 Holenbrunn
 Holff
@@ -8003,12 +7799,10 @@ Holler
 Hollern-Twielenfleth
 Hollfeld
 Hollingstedt
-Hollingstedt
 Hollis
 Hollnich
 Hollnseth
 Hollstadt
-Holm
 Holm
 Holnberg
 Holnstein
@@ -8059,13 +7853,9 @@ Holzgünz
 Holzhausen
 Holzhausen an der Haide
 Holzheim
-Holzheim
-Holzheim
-Holzheim
 Holzheim a.Forst
 Holzingen
 Holzkirch
-Holzkirchen
 Holzkirchen
 Holzmaden
 Holzminden
@@ -8077,8 +7867,6 @@ Holzsußra
 Holzweißig Kr Bitterfeld
 Holzwickede
 Holzzelle
-Homberg
-Homberg
 Homberg
 Homberg (Ohm)
 Homberg an der Ohm
@@ -8116,8 +7904,6 @@ Horath
 Horb
 Horb am Neckar
 Horbach
-Horbach
-Horbach
 Horben
 Horbruch
 Horburg
@@ -8139,7 +7925,6 @@ Hornau
 Hornbach
 Hornbek
 Hornberg
-Hornberg
 Hornburg
 Horneburg
 Horneck
@@ -8158,9 +7943,7 @@ Horrweiler
 Horschbach
 Horschelt
 Horst
-Horst
 Horstal
-Horstedt
 Horstedt
 Horstmar
 Horten
@@ -8259,7 +8042,6 @@ Husengau
 Husitin
 Huste
 Husterknupp
-Husum
 Husum
 Hutten
 Hutten von Frankenberg
@@ -8399,7 +8181,6 @@ Hütschenhausen
 Hüttblek
 Hütte
 Hütten
-Hütten
 Hüttenbach
 Hüttenberg
 Hüttenheim
@@ -8444,7 +8225,6 @@ Igling
 Ihlienworth
 Ihlingen
 Ihlow
-Ihlow
 Ihringen
 Ihrlerstein
 Ijsselgau
@@ -8466,7 +8246,6 @@ Illerkirchberg
 Illerrieden
 Illertissen
 Illesheim
-Illingen
 Illingen
 Illkirch
 Illmensee
@@ -8501,7 +8280,6 @@ Immensen
 Immenstaad am Bodensee
 Immenstadt
 Immenstadt im Allgäu
-Immenstedt
 Immenstedt
 Immerath
 Immert
@@ -8721,7 +8499,6 @@ Jesteburg
 Jestetten
 Jett von Münzenberg
 Jettenbach
-Jettenbach
 Jettingen
 Jettingen-Scheppach
 Jetzendorf
@@ -8846,7 +8623,6 @@ Kalefeld
 Kalenberg
 Kalenberger
 Kalenborn
-Kalenborn
 Kalenborn-Scheuern
 Kalendin
 Kalifornien
@@ -8883,7 +8659,6 @@ Kamern
 Kamm
 Kammeltal
 Kammerforst
-Kammerforst
 Kammerstein
 Kammin
 Kamminke
@@ -8909,13 +8684,11 @@ Kapfenburg
 Kappel
 Kappel-Grafenhausen
 Kappeln
-Kappeln
 Kappelrodeck
 Kappenberg
 Kapsweyer
 Karabant
 Karantanische Mark
-Karbach
 Karbach
 Karben
 Karby
@@ -8955,7 +8728,6 @@ Karsdorf
 Karsee
 Karspach
 Karstädt
-Karstädt
 Karwitz
 Kasbach-Ohlenberg
 Kaschenbach
@@ -8974,8 +8746,6 @@ Kastel-Staadt
 Kastelberg
 Kastellaun
 Kastilien
-Kastl
-Kastl
 Kastl
 Kastorf
 Katernberg
@@ -9154,15 +8924,11 @@ Kirchanschöring
 Kirchardt
 Kirchbarkau
 Kirchberg
-Kirchberg
-Kirchberg
 Kirchberg an der Iller
 Kirchberg an der Jagst
 Kirchberg an der Murr
 Kirchberg i.Wald
 Kirchbrak
-Kirchdorf
-Kirchdorf
 Kirchdorf
 Kirchdorf a.Inn
 Kirchdorf an der Amper
@@ -9190,7 +8956,6 @@ Kirchham
 Kirchhaslach
 Kirchhausen
 Kirchheilingen
-Kirchheim
 Kirchheim
 Kirchheim am Lettenbach
 Kirchheim am Neckar
@@ -9229,7 +8994,6 @@ Kirf
 Kirkel
 Kirn
 Kirnberg
-Kirrweiler
 Kirrweiler
 Kirsbach
 Kirschau
@@ -9343,8 +9107,6 @@ Klettgau
 Kletzin
 Kletzke
 Kleve
-Kleve
-Kleve
 Kleve-Mark
 Kleve-Mark-Ravensberg
 Kleverhamm
@@ -9428,13 +9190,11 @@ Kocherstetten
 Kodersdorf
 Kogel
 Kohlberg
-Kohlberg
 Kohlhof
 Kohlstöcken
 Kolb
 Kolb von Rheindorf
 Kolb von Wartenberg
-Kolberg
 Kolberg
 Kolbermoor
 Kolbingen
@@ -9537,7 +9297,6 @@ Krakow am See
 Kralovo Pole
 Kramerhof
 Kranenburg
-Kranenburg
 Kranichfeld
 Kransberg
 Kranzberg
@@ -9617,7 +9376,6 @@ Kroatengau
 Kroatien
 Krogaspe
 Krokau
-Krombach
 Krombach
 Kromsdorf
 Kronach
@@ -9829,9 +9587,6 @@ Königsegg-Aulendorf
 Königsegg-Rothenfels
 Königseggwald
 Königsfeld
-Königsfeld
-Königsfeld
-Königsfeld
 Königsfeld im Schwarzwald
 Königshain
 Königshain-Wiederau
@@ -9846,8 +9601,6 @@ Königsmoor
 Königsmoos
 Königspreußen
 Königssundern
-Königstein
-Königstein
 Königstein
 Königswalde
 Königswartha - Rakecy
@@ -9871,7 +9624,6 @@ Köslin i. P.
 Köstner
 Köstritz
 Köth von Wanscheid
-Köthel
 Köthel
 Köthen
 Köthen (Anhalt)
@@ -9961,7 +9713,6 @@ Laer
 Lafitte
 Lagarde
 Lage
-Lage
 Laggenbeck
 Lagow
 Lagyenbeck Weftf.
@@ -9970,7 +9721,6 @@ Lahnau
 Lahngau
 Lahnstein
 Lahntal
-Lahr
 Lahr
 Lahr-Mahlberg
 Lahr/Schwarzwald
@@ -10048,12 +9798,10 @@ Langdorf
 Langeln
 Langelsheim
 Langen
-Langen
 Langen Brütz
 Langenaltheim
 Langenargen
 Langenau
-Langenbach
 Langenbach
 Langenbach bei Kirburg
 Langenberg
@@ -10068,7 +9816,6 @@ Langendreer
 Langenegg
 Langenenslingen
 Langeneß
-Langenfeld
 Langenfeld
 Langenfeld (Rheinland)
 Langenhagen
@@ -10110,9 +9857,7 @@ Langscheid
 Langstedt
 Langsur
 Langwedel
-Langwedel
 Langweid am Lech
-Langweiler
 Langweiler
 Langwerth
 Langwieden
@@ -10142,10 +9887,7 @@ Latendorf
 Lathen
 Latour d'Auvergne
 Laubach
-Laubach
-Laubach
 Lauban
-Lauben
 Lauben
 Laubenberg
 Laubendorf
@@ -10162,7 +9904,6 @@ Lauck
 Lauda
 Lauda-Königshofen
 Laudenau
-Laudenbach
 Laudenbach
 Laudenberg
 Laudert
@@ -10212,8 +9953,6 @@ Lauter
 Lauter-Bernsbach
 Lauterach
 Lauterbach
-Lauterbach
-Lauterbach
 Lauterberg
 Lauterberg-Scharzfels
 Lauterbrunn
@@ -10224,8 +9963,6 @@ Lautern
 Lautersheim
 Lauterstein
 Lautert
-Lautertal
-Lautertal
 Lautertal
 Lautlingen
 Lautrach
@@ -10283,15 +10020,12 @@ Leerdam
 Leese
 Leezdorf
 Leezen
-Leezen
 Legau
 Legde/Quitzöbel
 Legden
 Legeneraland
 Lehe
-Lehe
 Lehen
-Lehesten
 Lehesten
 Lehmen
 Lehmkuhlen
@@ -10321,10 +10055,7 @@ Leiferde
 Leigh-on-Sea
 Leiher von Talheim
 Leimbach
-Leimbach
-Leimbach
 Leimberg
-Leimen
 Leimen
 Leimen b. Heidelberg
 Leimersheim
@@ -10417,7 +10148,6 @@ Lengenfeld
 Lengenloch
 Lengenwang
 Lengerich
-Lengerich
 Lengfeld
 Lenggries
 Lengsfeld
@@ -10443,7 +10173,6 @@ Leoben
 Leobengau
 Leofels
 Leomeriche
-Leonberg
 Leonberg
 Leonrod
 Leonstein
@@ -10474,7 +10203,6 @@ Leubelfing
 Leubliitzer
 Leubnitz
 Leubsdorf
-Leubsdorf
 Leuchtenberg
 Leuchtenburg
 Leuggern
@@ -10483,10 +10211,8 @@ Leuna
 Leupoldsgrün
 Leupolz
 Leutenbach
-Leutenbach
 Leutenberg
 Leuterod
-Leutersdorf
 Leutersdorf
 Leutershausen
 Leutesdorf
@@ -10515,16 +10241,11 @@ Liblar
 Lich
 Lichtel
 Lichtenau
-Lichtenau
-Lichtenau
-Lichtenau
-Lichtenberg
 Lichtenberg
 Lichtenberg in Württemberg
 Lichtenberg/Erzgebirge
 Lichtenborn
 Lichteneck
-Lichtenfels
 Lichtenfels
 Lichtenhain
 Lichtenstein
@@ -10539,7 +10260,6 @@ Lidingo-Brevik
 Lidköping
 Liebau
 Liebburg
-Liebenau
 Liebenau
 Liebenberg
 Liebenburg
@@ -10598,9 +10318,6 @@ Lille
 Lillestroem
 Limassol
 Limbach
-Limbach
-Limbach
-Limbach
 Limbach-Oberfrohna
 Limberg
 Limburg
@@ -10631,7 +10348,6 @@ Linagga
 Linau
 Linck von Kirchheim
 Lind
-Lind
 Linda
 Linda b. Weida
 Lindach
@@ -10640,14 +10356,10 @@ Lindau (Bodensee)
 Lindberg
 Lindelbach
 Linden
-Linden
-Linden
-Linden
 Linden a. d. Ruhr
 Linden-Ruhr
 Lindenau
 Lindenbach
-Lindenberg
 Lindenberg
 Lindenberg im Allgäu
 Lindenbronn
@@ -10797,7 +10509,6 @@ Lohkirchen
 Lohmar
 Lohme
 Lohmen
-Lohmen
 Lohmühle
 Lohn
 Lohne
@@ -10849,7 +10560,6 @@ Loop
 Loose
 Looz
 Looz-Corswarem
-Lorch
 Lorch
 Lorient
 Lorsch
@@ -10967,7 +10677,6 @@ Löbau
 Löberschütz
 Löbichau
 Löbnitz
-Löbnitz
 Löchgau
 Löcknitz
 Lödla
@@ -11028,7 +10737,6 @@ Lübtheen
 Lübz
 Lüchau
 Lüchow
-Lüchow
 Lückenburg
 Lüdenscheid
 Lüdenscheid i. W.
@@ -11055,7 +10763,6 @@ Lünen
 Lünne
 Lürschau
 Lürschau b. Schleswig
-Lüssow
 Lüssow
 Lütau
 Lütetsburg
@@ -11160,7 +10867,6 @@ Malans-Jenins
 Malaspina
 Malaunay
 Malberg
-Malberg
 Malbergweich
 Malborn
 Malburgen
@@ -11177,7 +10883,6 @@ Malliß
 Malmedy
 Malmö
 Malsburg-Marzell
-Malsch
 Malsch
 Malschwitz - Malešecy
 Malsfeld
@@ -11197,7 +10902,6 @@ Mandel
 Mandelbachtal
 Mandern
 Manderscheid
-Manderscheid
 Manderscheid-Blankenheim
 Manderscheid-Gerolstein
 Manderscheid-Kail
@@ -11207,7 +10911,6 @@ Manhagen
 Manhattan
 Manicor
 Manlich
-Mannebach
 Mannebach
 Mannhagen
 Mannheim
@@ -11326,7 +11029,6 @@ Markttaschendorf
 Markttischingen
 Marktzeuln
 Markvippach
-Marl
 Marl
 Marlborough
 Marlenheim
@@ -11451,9 +11153,7 @@ Mechterstädt
 Mecinga
 Meckel
 Meckenbach
-Meckenbach
 Meckenbeuren
-Meckenheim
 Meckenheim
 Meckesheim
 Mecklenburg
@@ -11507,9 +11207,7 @@ Mehmels
 Mehna
 Mehr
 Mehren
-Mehren
 Mehrerau
-Mehring
 Mehring
 Mehringen i. Anh.
 Mehrstetten
@@ -11628,7 +11326,6 @@ Merseburg
 Merstem
 Merten
 Mertendorf
-Mertendorf
 Mertesdorf
 Mertesheim
 Mertingen
@@ -11667,7 +11364,6 @@ Methingau
 Metsch
 Metten
 Mettendorf
-Mettenheim
 Mettenheim
 Metterich
 Metternich
@@ -11708,7 +11404,6 @@ Michaelsberg
 Michelau
 Michelau i.Steigerwald
 Michelau in Oberfranken
-Michelbach
 Michelbach
 Michelbach an der Bilz
 Michelbergere
@@ -11767,7 +11462,6 @@ Minckwitz
 Mindelheim
 Mindelstetten
 Minden
-Minden
 Minderlittgen
 Minderslachen
 Mindilriet
@@ -11817,7 +11511,6 @@ Mitten
 Mitten a. d. Ruhr
 Mittenaar
 Mittenwald
-Mittenwalde
 Mittenwalde
 Mitterburg
 Mitterfels
@@ -11927,12 +11620,10 @@ Moormerland
 Moorrege
 Moorweg
 Moos
-Moos
 Moosach
 Moosbach
 Moosbeuren
 Moosbrunn
-Moosburg
 Moosburg
 Moosham
 Mooshof
@@ -12063,7 +11754,6 @@ Muselgouwe
 Musenlo
 Muskau
 Mustin
-Mustin
 Musweiler
 Muth
 Mutharicheshuntari
@@ -12091,7 +11781,6 @@ Märkische Heide
 Märkische Höhe
 Mäusdorf
 Möckern
-Möckern
 Möckmühl
 Mödingen
 Mödrath
@@ -12103,9 +11792,7 @@ Möhnsen
 Möhrendorf
 Möhringen
 Möllenbeck
-Möllenbeck
 Möllenhagen
-Mölln
 Mölln
 Mölltal
 Mölschow
@@ -12150,7 +11837,6 @@ Mörsberg
 Mörsch
 Mörschbach
 Mörschied
-Mörsdorf
 Mörsdorf
 Mörsfeld
 Mörsingen
@@ -12202,9 +11888,6 @@ Mühlenrade
 Mühlental
 Mühlgau
 Mühlhausen
-Mühlhausen
-Mühlhausen
-Mühlhausen
 Mühlhausen im Täle
 Mühlhausen-Ehingen
 Mühlheim
@@ -12228,7 +11911,6 @@ Mülheim a. d. Ruhr
 Mülheim an der Mosel
 Mülheim an der Ruhr
 Mülheim-Kärlich
-Müllenbach
 Müllenbach
 Müllenheim
 Müller zu Lengsfeld
@@ -12271,7 +11953,6 @@ Münkheim
 Münnerstadt
 Münsing
 Münsingen
-Münster
 Münster
 Münster (Hessen)
 Münster i. W.
@@ -12441,7 +12122,6 @@ Neheim-Neufürstenberg
 Nehms
 Nehmten
 Nehren
-Nehren
 Neichen
 Neideck
 Neidelsbach
@@ -12476,7 +12156,6 @@ Nendingen
 Nenndorf
 Nennhausen
 Nennslingen
-Nentershausen
 Nentershausen
 Nenzenheim
 Nerdinckland
@@ -12547,7 +12226,6 @@ Neubronn
 Neubronner
 Neubruchhausen
 Neubrunn
-Neubrunn
 Neubukow
 Neubulach
 Neuburg
@@ -12580,7 +12258,6 @@ Neuenbürg
 Neuendeich
 Neuendettelsau
 Neuendorf
-Neuendorf
 Neuendorf bei Elmshorn
 Neuendorf-Sachsenbande
 Neuengleichen
@@ -12591,15 +12268,6 @@ Neuenhain
 Neuenhaus
 Neuenheerse
 Neuenkirchen
-Neuenkirchen
-Neuenkirchen
-Neuenkirchen
-Neuenkirchen
-Neuenkirchen
-Neuenkirchen
-Neuenkirchen
-Neuenkirchen
-Neuenkirchen
 Neuenkirchen-Vörden
 Neuenmarkt
 Neuenmuhr
@@ -12608,7 +12276,6 @@ Neuenrade i. Westf.
 Neuensalz
 Neuenstadt
 Neuenstadt am Kocher
-Neuenstein
 Neuenstein
 Neuental
 Neuerburg
@@ -12646,7 +12313,6 @@ Neuhofen
 Neuhohenems
 Neuhäusel
 Neuhütten
-Neuhütten
 Neuiges
 Neuilly s. Seine
 Neukalen
@@ -12655,11 +12321,7 @@ Neukastell
 Neukiburg
 Neukieritzsch
 Neukirch
-Neukirch
 Neukirch/Lausitz
-Neukirchen
-Neukirchen
-Neukirchen
 Neukirchen
 Neukirchen bei Sulzbach-Rosenberg
 Neukirchen beim Heiligen Blut
@@ -12680,7 +12342,6 @@ Neulußheim
 Neumagen
 Neumagen-Dhron
 Neumark
-Neumark
 Neumarkt
 Neumarkt i.d.OPf.
 Neumarkt in der Oberpfalz
@@ -12697,11 +12358,6 @@ Neunheilingen
 Neunhof
 Neunkhausen
 Neunkirchen
-Neunkirchen
-Neunkirchen
-Neunkirchen
-Neunkirchen
-Neunkirchen
 Neunkirchen a. Sand
 Neunkirchen a.Brand
 Neunkirchen am Potzberg
@@ -12714,7 +12370,6 @@ Neupotz
 Neupreußen
 Neuravensburg
 Neureichenau
-Neuried
 Neuried
 Neurod
 Neurode
@@ -12970,7 +12625,6 @@ Niederwallmenach
 Niederwambach
 Niederwangen
 Niederweiler
-Niederweiler
 Niederweis
 Niederweisel
 Niederwerrn
@@ -13009,7 +12663,6 @@ Niendorf
 Niendorf bei Berkenthin
 Niendorf/Stecknitz
 Nienhagen
-Nienhagen
 Nienover
 Nienstädt
 Nienwohld
@@ -13038,7 +12691,6 @@ Nimritz
 Nimshuscheid
 Nimsreuland
 Nimwegen
-Nindorf
 Nindorf
 Nippenburg
 Nisane
@@ -13159,7 +12811,6 @@ Norththuianti
 Norththuringun
 Northwidu
 Nortmoor
-Nortorf
 Nortorf
 Nortrup
 Nortsuavi
@@ -13306,7 +12957,6 @@ Oberensingen
 Oberentersbach
 Oberer Wöhrd
 Obererbach
-Obererbach
 Obererthal
 Obereubigheim
 Oberfell
@@ -13331,16 +12981,12 @@ Obergösgen
 Obergünzburg
 Oberhaching
 Oberhaid
-Oberhaid
 Oberhainbrunn
 Oberhalbstein
 Oberhambach
 Oberharmersbach
 Oberharz am Brocken
 Oberhaus
-Oberhausen
-Oberhausen
-Oberhausen
 Oberhausen
 Oberhausen an der Appel
 Oberhausen an der Nahe
@@ -13406,7 +13052,6 @@ Obernberg
 Obernbreit
 Obernburg am Main
 Oberndorf
-Oberndorf
 Oberndorf a.Lech
 Oberndorf am Neckar
 Oberneisen
@@ -13438,7 +13083,6 @@ Oberrad
 Oberraden
 Oberrahmed i. Wests
 Oberregenbach
-Oberreichenbach
 Oberreichenbach
 Oberreidenbach
 Oberreute
@@ -13712,7 +13356,6 @@ Oldenburg in Holstein
 Oldenburg-Wildeshausen
 Oldenbüttel
 Oldendorf
-Oldendorf
 Oldendorf (Luhe)
 Oldenhütten
 Oldenstadt
@@ -13812,7 +13455,6 @@ Orsini von Rosenberg
 Orsoy
 Ortenau
 Ortenberg
-Ortenberg
 Ortenburg
 Ortenburg-Kraiburg
 Ortenburg-Tambach
@@ -13856,7 +13498,6 @@ Osterbruch
 Osterburg
 Osterburg (Altmark)
 Osterburken
-Osterby
 Osterby
 Ostercappeln
 Ostereistedt
@@ -13916,7 +13557,6 @@ Ottenbach
 Ottenberg
 Ottenburg
 Ottenbüttel
-Ottendorf
 Ottendorf
 Ottendorf-Okrilla
 Ottenhausen
@@ -14011,7 +13651,6 @@ Pantenburg
 Panzweiler
 Papenburg
 Papendorf
-Papendorf
 Papenhagen
 Paponen
 Pappenheim
@@ -14044,7 +13683,6 @@ Passau
 Passavant
 Passee
 Passerino
-Passow
 Passow
 Pastetten
 Patersberg
@@ -14127,9 +13765,6 @@ Pessin
 Peterboroug
 Petersaurach
 Petersbach
-Petersberg
-Petersberg
-Petersberg
 Petersberg
 Petersbuch
 Petersdorf
@@ -14269,7 +13904,6 @@ Pinerolo
 Pingelshagen
 Pinneberg
 Pinnow
-Pinnow
 Pintesfeld
 Pinzberg
 Pinzgau
@@ -14389,7 +14023,6 @@ Polleben
 Pollenfeld
 Pollhagen
 Polling
-Polling
 Polnisch
 Polnisch-Livland
 Polozk
@@ -14428,7 +14061,6 @@ Poppenburg
 Poppenbüll
 Poppendorf
 Poppenhausen
-Poppenhausen
 Poppenlauer
 Poppenricht
 Popponen
@@ -14462,7 +14094,6 @@ Potzlinger
 Pouch
 Poudorf Gößnitz
 Poxdorf
-Poxdorf
 Poyenberg
 Prachen-Lelty
 Prachin
@@ -14479,7 +14110,6 @@ Praßberg
 Prebberede
 Prebitz
 Prechtal
-Preetz
 Preetz
 Pregenrot
 Preischeid
@@ -14635,7 +14265,6 @@ Quernheim
 Quesizi
 Questenberg
 Quickborn
-Quickborn
 Quiddelbach
 Quierschied
 Quinzingouwe
@@ -14652,7 +14281,6 @@ Rabeberg i. Sa.
 Rabel
 Raben Steinfeld
 Rabenau
-Rabenau
 Rabenau i. Sa.
 Rabenhaupt
 Rabenholz
@@ -14668,7 +14296,6 @@ Rackwitz
 Radali
 Radbruch
 Raddestorf
-Rade
 Rade
 Rade b. Hohenwestedt
 Rade vor dem Wald
@@ -14693,7 +14320,6 @@ Ragow-Merz
 Raguhn-Jeßnitz
 Rahden
 Raibach
-Rain
 Rain
 Rainau
 Raisting
@@ -14721,7 +14347,6 @@ Rammelsberg
 Rammelslohe Braunschweig-Celle
 Rammenau
 Rammersdorf
-Rammingen
 Rammingen
 Ramsau
 Ramsau bei Berchtesgaden
@@ -14800,7 +14425,6 @@ Ratoltesbuoch
 Ratsberg
 Ratshausen
 Rattelsdorf
-Rattelsdorf
 Rattenberg
 Rattenheim
 Rattenkirchen
@@ -14841,7 +14465,6 @@ Rauris
 Rauschenberg
 Rauschner
 Rauschwitz
-Rausdorf
 Rausdorf
 Rauxel
 Raußendorf
@@ -14940,15 +14563,10 @@ Reichelsheim (Odenwald)
 Reichenau
 Reichenau i. B.
 Reichenbach
-Reichenbach
-Reichenbach
-Reichenbach
-Reichenbach
 Reichenbach am Heuberg
 Reichenbach an der Fils
 Reichenbach-Steegen
 Reichenbach/Oberlausitz
-Reichenberg
 Reichenberg
 Reichenburg
 Reicheneck
@@ -15016,7 +14634,6 @@ Reinihgouwe
 Reinsberg
 Reinsbronn
 Reinsbüttel
-Reinsdorf
 Reinsdorf
 Reinsfeld
 Reinstein
@@ -15103,9 +14720,7 @@ Rethel
 Rethem
 Rethem (Aller)
 Rethwisch
-Rethwisch
 Retschow
-Rettenbach
 Rettenbach
 Rettenbach a.Auerberg
 Rettenberg
@@ -15238,8 +14853,6 @@ Riedbach
 Riede
 Riedelberg
 Rieden
-Rieden
-Rieden
 Rieden am Forggensee
 Riedenberg
 Riedenburg
@@ -15304,8 +14917,6 @@ Riga
 Rijssel
 Rikingen
 Rimbach
-Rimbach
-Rimbach
 Rimhorn
 Rimpach
 Rimpar
@@ -15350,7 +14961,6 @@ Ritter zu Grunstein
 Ritterhude
 Ritterkreis
 Rittersdorf
-Rittersdorf
 Rittersgrün
 Rittersheim
 Ritz
@@ -15393,7 +15003,6 @@ Rodeck
 Rodemachern
 Roden
 Rodenbach
-Rodenbach
 Rodenbach bei Puderbach
 Rodenbek
 Rodenberg
@@ -15429,19 +15038,12 @@ Rogätz
 Rohan-Soubise
 Rohlstorf
 Rohr
-Rohr
 Rohr i.NB
 Rohr-Waldstetten
 Rohrau
 Rohrbach
-Rohrbach
-Rohrbach
-Rohrbach
-Rohrbach
-Rohrberg
 Rohrberg
 Rohrburger Mühle
-Rohrdorf
 Rohrdorf
 Rohrenfels
 Rohrsen
@@ -15472,7 +15074,6 @@ Romsthal
 Ronciglione
 Rondeshagen
 Ronneburg
-Ronneburg
 Ronneburg i. Thür.
 Ronnenberg
 Ronow
@@ -15491,14 +15092,12 @@ Roschbach
 Rosche
 Roscheid
 Rosdorf
-Rosdorf
 Roseburg
 Rosemont
 Rosen
 Rosenau
 Rosenbach
 Rosenbach/Vogtland
-Rosenberg
 Rosenberg
 Rosenberger
 Rosenburg
@@ -15508,8 +15107,6 @@ Rosenegg
 Rosenfeld
 Rosenfels
 Rosengarten
-Rosengarten
-Rosenheim
 Rosenheim
 Rosenkopf
 Rosenow
@@ -15549,10 +15146,6 @@ Rotenkirchen
 Rotenstein
 Rotenthal
 Roth
-Roth
-Roth
-Roth
-Roth
 Roth an der Our
 Roth bei Prüm
 Roth von Burgschwalbach
@@ -15582,7 +15175,6 @@ Rothtal
 Rotrussland
 Rotselaar
 Rott
-Rott
 Rott am Inn
 Rottach-Egern
 Rottal
@@ -15609,9 +15201,6 @@ Roxheim
 Roy
 Rozendaal
 Roßbach
-Roßbach
-Roßbach
-Roßdorf
 Roßdorf
 Roßhaupten
 Roßla
@@ -15676,7 +15265,6 @@ Ruppach-Goldhausen
 Ruppertsberg
 Ruppertsecken
 Ruppertshain
-Ruppertshofen
 Ruppertshofen
 Ruppertsweiler
 Ruppichteroth
@@ -15755,7 +15343,6 @@ Rötlen
 Rötsweiler-Nockenthal
 Rötteln
 Röttenbach
-Röttenbach
 Röttingen
 Rötz
 Rövershagen
@@ -15764,8 +15351,6 @@ Rüber
 Rübgarten
 Rückerod
 Rückeroth
-Rückersdorf
-Rückersdorf
 Rückersdorf
 Rückholz
 Rückweiler
@@ -15938,7 +15523,6 @@ Salching
 Saldenburg
 Saldern
 Salem
-Salem
 Salgen
 Salier
 Salingouwe
@@ -15969,7 +15553,6 @@ Saluelt
 Salurn
 Saluzzo
 Salveld
-Salz
 Salz
 Salzatal
 Salzberg
@@ -16043,10 +15626,8 @@ Sankt Goarshausen
 Sankt Ingbert
 Sankt Jakobsberg
 Sankt Johann
-Sankt Johann
 Sankt Julian
 Sankt Jörgenschild
-Sankt Katharinen
 Sankt Katharinen
 Sankt Lutzen
 Sankt Magnus
@@ -16229,7 +15810,6 @@ Schaumburg-Lippe
 Schaunberg
 Schaunberger
 Schauren
-Schauren
 Schauroth
 Schechen
 Schechingen
@@ -16269,7 +15849,6 @@ Schemmerberg
 Schemmerhofen
 Schenck
 Schenectady
-Schenefeld
 Schenefeld
 Schenk
 Schenk von Arberg
@@ -16397,7 +15976,6 @@ Schlehdorf
 Schlehengäu
 Schleich
 Schleicher von Stötten
-Schleid
 Schleid
 Schleiden
 Schleierhof
@@ -16535,7 +16113,6 @@ Schneckenhausen
 Schneckenlohe
 Schnedinghausen
 Schneeberg
-Schneeberg
 Schneeburg
 Schnega
 Schneidemühl
@@ -16574,11 +16151,9 @@ Schonungen
 Schonwald
 Schopfheim
 Schopfloch
-Schopfloch
 Schopflocherhof
 Schopp
 Schorfheide
-Schorndorf
 Schorndorf
 Schorndorf Württbg.
 Schornsheim
@@ -16640,7 +16215,6 @@ Schwaben
 Schwabengau
 Schwabenheim an der Selz
 Schwabhausen
-Schwabhausen
 Schwabmünchen
 Schwabsburg
 Schwabsoien
@@ -16654,14 +16228,12 @@ Schwaigern
 Schwaighausen
 Schwaikheim
 Schwalbach
-Schwalbach
 Schwalbfeld
 Schwalenberg
 Schwalenberg-Sternberg
 Schwall
 Schwallungen
 Schwalmstadt
-Schwalmtal
 Schwalmtal
 Schwamendingen
 Schwan
@@ -16685,11 +16257,9 @@ Schwartbuck
 Schwarz
 Schwarza
 Schwarzach
-Schwarzach
 Schwarzach am Main
 Schwarzach b.Nabburg
 Schwarzatal
-Schwarzbach
 Schwarzbach
 Schwarzburg
 Schwarzburg-Arnstadt
@@ -16712,7 +16282,6 @@ Schwarzenbek
 Schwarzenberg
 Schwarzenberg i. Sa
 Schwarzenberg/Erzgebirge
-Schwarzenborn
 Schwarzenborn
 Schwarzenbruck
 Schwarzenbrunn i. Thür.
@@ -16768,7 +16337,6 @@ Schwemberg
 Schwendi
 Schwendi zu Klingenstein
 Schwenningen
-Schwenningen
 Schwenningen a. N
 Schwentinental
 Schwepnitz
@@ -16776,7 +16344,6 @@ Schwepnitz i. Sa.
 Schweppenhausen
 Schwerbach
 Schweren
-Schwerin
 Schwerin
 Schweringen
 Schwerinsdorf
@@ -16819,11 +16386,9 @@ Schöller
 Schöllkrippen
 Schöllnach
 Schömberg
-Schömberg
 Schömberg b. Wildbad
 Schömerich
 Schönaich
-Schönau
 Schönau
 Schönau (Pfalz)
 Schönau a.d.Brend
@@ -16834,21 +16399,12 @@ Schönau zu Zell
 Schönau-Berzdorf auf dem Eigen
 Schönau-Chemnitz
 Schönbach
-Schönbach
 Schönbeck
 Schönbek
-Schönberg
-Schönberg
-Schönberg
-Schönberg
-Schönberg
 Schönberg
 Schönberg (Holstein)
 Schönberg auf Wesel
 Schönberg i. M.
-Schönborn
-Schönborn
-Schönborn
 Schönborn
 Schönborn-Buchheim
 Schönborn-Heusenstamm
@@ -16860,13 +16416,9 @@ Schönburg
 Schönburg-Glauchau
 Schönburg-Waldenburg
 Schöndorf
-Schöndorf
 Schönebeck
 Schönebeck (Elbe)
 Schöneberg
-Schöneberg
-Schöneberg
-Schöneck
 Schöneck
 Schönecken
 Schönefeld
@@ -16881,8 +16433,6 @@ Schöner von Straubenhardt
 Schönermark
 Schönewalde
 Schönewörde
-Schönfeld
-Schönfeld
 Schönfeld
 Schönfels-Werdau
 Schöngeising
@@ -16902,7 +16452,6 @@ Schönstein
 Schönstätt
 Schöntal
 Schönthal
-Schönwald
 Schönwald
 Schönwald im Schwarzwald
 Schönwalde
@@ -16952,15 +16501,11 @@ Seddin
 Seddiner See
 Seeba
 Seebach
-Seebach
 Seebach-Zürich
 Seeblick
 Seeboldsdorf
 Seeburg
 Seedorf
-Seedorf
-Seedorf
-Seefeld
 Seefeld
 Seefried
 Seeg
@@ -16973,7 +16518,6 @@ Seeheim-Jugenheim
 Seehof
 Seekirch
 Seeland
-Seelbach
 Seelbach
 Seelbach (Westerwald)
 Seelbach bei Hamm (Sieg)
@@ -17061,7 +16605,6 @@ Sembach
 Semgallen
 Semlow
 Sempy
-Senden
 Senden
 Sendenhorst
 Seneghem
@@ -17187,9 +16730,7 @@ Silberstedt
 Silbitz
 Silver-Centre
 Silz
-Silz
 Silzen
-Simbach
 Simbach
 Simmelsdorf
 Simmerath
@@ -17321,7 +16862,6 @@ Sommerkahl
 Sommerland
 Sommerloch
 Sommerschenburg
-Sommersdorf
 Sommersdorf
 Sondelfingen
 Sonderbuch
@@ -17528,7 +17068,6 @@ Stallwang
 Stamford
 Stammbach
 Stammham
-Stammham
 Stammheim
 Stammler
 Stamp
@@ -17559,7 +17098,6 @@ Stauf zu Ehrenfels
 Staufen
 Staufen i. Br.
 Staufen im Breisgau
-Staufenberg
 Staufenberg
 Staufeneck
 Staufer
@@ -17601,7 +17139,6 @@ Steigra
 Steimbke
 Steimel
 Stein
-Stein
 Stein von Lichtenberg
 Stein von Ostheim
 Stein von Steinegg
@@ -17622,21 +17159,16 @@ Stein-Wingert
 Stein-hude
 Steina
 Steinach
-Steinach
-Steinach
 Steinalben
 Steinau
 Steinau an der Straße
 Steinau genannt Steinrück
 Steinau-Raudten
 Steinbach
-Steinbach
-Steinbach
 Steinbach am Donnersberg
 Steinbach am Glan
 Steinbach am Wald
 Steinbach-Hallenberg
-Steinberg
 Steinberg
 Steinberg am See
 Steinbergkirche
@@ -17651,13 +17183,9 @@ Steineck
 Steinefrenz
 Steinegg
 Steinen
-Steinen
 Steinenbronn
 Steinenhausen
 Steineroth
-Steinfeld
-Steinfeld
-Steinfeld
 Steinfeld
 Steinfelder
 Steinfels
@@ -17665,8 +17193,6 @@ Steinfurt
 Steinfurt-Bentheim
 Steinfurth
 Steingaden
-Steinhagen
-Steinhagen
 Steinhagen
 Steinhausen
 Steinhausen an der Rottum
@@ -17678,7 +17204,6 @@ Steinheringa
 Steinheuser
 Steinheuterode
 Steinhorst
-Steinhorst
 Steinhude
 Steinhäuser
 Steinhöfel
@@ -17686,7 +17211,6 @@ Steinhöring
 Steinigtwolmsdorf
 Steiningen
 Steinkallenfels
-Steinkirchen
 Steinkirchen
 Steinmauern
 Steinreich
@@ -17730,8 +17254,6 @@ Sternstein
 Sterrenberg
 Sterup
 Stetten
-Stetten
-Stetten
 Stetten am kalten Markt
 Stettenberg
 Stettenfels
@@ -17769,7 +17291,6 @@ Stockhammer
 Stockhausen
 Stockhausen-Illfurth
 Stockheim
-Stockheim
 Stockholm
 Stockport
 Stocksberg
@@ -17793,7 +17314,6 @@ Stollberg
 Stollberg/Erzgebirge
 Stollhofen
 Stolp
-Stolpe
 Stolpe
 Stolpe an der Peene
 Stolpe auf Usedom
@@ -17961,8 +17481,6 @@ Sulz am Neckar
 Sulza
 Sulzau
 Sulzbach
-Sulzbach
-Sulzbach
 Sulzbach am Main
 Sulzbach an der Murr
 Sulzbach-Laufen
@@ -17976,10 +17494,8 @@ Sulzdorf a.d.Lederhecke
 Sulzemoos
 Sulzen
 Sulzfeld
-Sulzfeld
 Sulzfeld am Main
 Sulzgau
-Sulzheim
 Sulzheim
 Sulzthal
 Sumiswald
@@ -18124,7 +17640,6 @@ Tailfingen
 Tairnbach
 Talach
 Talheim
-Talheim
 Talhof
 Talkau
 Talleyrand
@@ -18138,8 +17653,6 @@ Tamm
 Tangerhütte
 Tangermünde
 Tangstedt
-Tangstedt
-Tann
 Tann
 Tanna
 Tanne
@@ -18182,8 +17695,6 @@ Tauberrettersheim
 Taucha
 Tauche
 Tauer
-Taufkirchen
-Taufkirchen
 Taufkirchen
 Taunusstein
 Taura
@@ -18259,7 +17770,6 @@ Tetenhusen
 Teteringen
 Teterow
 Tetschen
-Tettau
 Tettau
 Tettenweis
 Tettnang
@@ -18382,15 +17892,10 @@ Thürkow
 Thürnhofen
 Tiddische
 Tiefenbach
-Tiefenbach
-Tiefenbach
-Tiefenbach
-Tiefenbach
 Tiefenbronn
 Tiefenhülen
 Tiefenort
 Tiefenried
-Tiefenthal
 Tiefenthal
 Tielen
 Tielenhemme
@@ -18489,7 +17994,6 @@ Traisen
 Traisen-Feistritz
 Traismauer
 Traitsching
-Tramm
 Tramm
 Transleithanien
 Trapezunt
@@ -18783,7 +18287,6 @@ Umendorf
 Umkirch
 Ummanz
 Ummendorf
-Ummendorf
 Ummern
 Ummerstadt
 Umpfenbach
@@ -18938,9 +18441,6 @@ Upsala
 Upsater
 Urach
 Urbach
-Urbach
-Urbach
-Urbar
 Urbar
 Urberach
 Urfersheim
@@ -19057,7 +18557,6 @@ Veitsrodt
 Velbert
 Velburg
 Velden
-Velden
 Veldenz
 Veldes
 Velen
@@ -19130,7 +18629,6 @@ Viereck
 Viereth-Trunstadt
 Vierherrenborn
 Vierhöfen
-Vierkirchen
 Vierkirchen
 Vierlande
 Vierlinden
@@ -19273,7 +18771,6 @@ Vögnitz
 Vöhl
 Vöhrenbach
 Vöhringen
-Vöhringen
 Völderndorff
 Völkermarkt
 Völkersbach
@@ -19367,8 +18864,6 @@ Walchengau
 Walcherun
 Walchum
 Wald
-Wald
-Wald
 Wald-Michelbach
 Waldachtal
 Waldahi
@@ -19380,8 +18875,6 @@ Waldbeuren
 Waldbott-Bassenheim
 Waldbreitbach
 Waldbronn
-Waldbrunn
-Waldbrunn
 Waldbrunn
 Waldbröl
 Waldburg
@@ -19403,7 +18896,6 @@ Walddorf
 Walddorfhäslach
 Walde
 Waldeck
-Waldeck
 Waldeck-Eisenberg
 Waldeck-Pyrmont
 Waldeck-Wildungen
@@ -19412,7 +18904,6 @@ Waldeleuinga
 Waldems
 Walden
 Waldenbuch
-Waldenburg
 Waldenburg
 Waldenburg genannt Schenkern
 Waldenburg-Altwasser
@@ -19472,7 +18963,6 @@ Waldsolms
 Waldstein
 Waldstein-Wartenberg
 Waldstetten
-Waldstetten
 Waldstädte
 Waldstätte
 Waldthurn
@@ -19517,8 +19007,6 @@ Wallgau
 Wallhalben
 Wallhardt
 Wallhausen
-Wallhausen
-Wallhausen
 Wallichen
 Wallis
 Wallmenroth
@@ -19538,7 +19026,6 @@ Walpertskirchen
 Walpoden von der Neuerburg
 Walpoten
 Walschleben
-Walsdorf
 Walsdorf
 Walsee
 Walshausen
@@ -19614,7 +19101,6 @@ Warnenfeld
 Warngau
 Warnkenhagen
 Warnow
-Warnow
 Warnsdorf
 Waro
 Warpe
@@ -19630,7 +19116,6 @@ Warstatt
 Warstein
 Wartau
 Wartburg
-Wartenberg
 Wartenberg
 Wartenberg-Rohrbach
 Wartenberg-Rot
@@ -19691,7 +19176,6 @@ Wauarensis
 Waudricia
 Wavra
 Wawern
-Wawern
 Waxenberg
 Waxweiler
 Wchinitz
@@ -19734,7 +19218,6 @@ Wehnerts
 Wehningen
 Wehntal
 Wehr
-Wehr
 Wehrbleck
 Wehrda
 Wehrden
@@ -19760,15 +19243,12 @@ Weiden
 Weiden a. Ruhr.
 Weiden in der Oberpfalz
 Weidenbach
-Weidenbach
-Weidenbach
 Weidenberg
 Weidenhahn
 Weidenhofen
 Weidenstetten
 Weidenthal
 Weidhausen b.Coburg
-Weiding
 Weiding
 Weidingen
 Weidlingau
@@ -19797,7 +19277,6 @@ Weilburg
 Weilen
 Weilen unter den Rinnen
 Weiler
-Weiler
 Weiler bei Bingen
 Weiler bei Monzingen
 Weiler-Simmerberg
@@ -19818,13 +19297,11 @@ Weimar-Orlamünde
 Weinbach
 Weinböhla
 Weingarten
-Weingarten
 Weingarten (Pfalz)
 Weingartsgreuth
 Weinheim
 Weinolsheim
 Weinsberg
-Weinsheim
 Weinsheim
 Weinstadt
 Weinähr
@@ -19855,7 +19332,6 @@ Weitefeld
 Weitenburg
 Weitendorf
 Weitenhagen
-Weitenhagen
 Weiterdingen
 Weitersbach
 Weitersborn
@@ -19873,12 +19349,10 @@ Weitzenburg
 Weiß
 Weiß von Feuerbach
 Weißbach
-Weißbach
 Weißdorf
 Weißenau
 Weißenbach
 Weißenberg - Wóspork
-Weißenborn
 Weißenborn
 Weißenborn/Erzgebirge
 Weißenbrunn
@@ -19995,7 +19469,6 @@ Werdenberg-Trochtelfingen
 Werdenfels
 Werdenstein
 Werder
-Werder
 Werder (Havel)
 Werdohl
 Werdohl i. W.
@@ -20048,12 +19521,10 @@ Werth
 Wertheim
 Wertheim-Löwenstein
 Werther
-Werther
 Wertingen
 Wesel
 Weselberg
 Wesemichshof
-Wesenberg
 Wesenberg
 Wesendorf
 Weser-Departement
@@ -20076,7 +19547,6 @@ Westchiffon-Sea Eng.
 Weste
 Westen
 Westendorf
-Westendorf
 Westensee
 Wester-Ohrstedt
 Westerau
@@ -20090,7 +19560,6 @@ Westerfeld
 Westergau
 Westergellersen
 Westergo
-Westerheim
 Westerheim
 Westerhever
 Westerhof
@@ -20127,9 +19596,7 @@ Westgalizien
 Westgau
 Westgreußen
 Westhausen
-Westhausen
 Westheide
-Westheim
 Westheim
 Westhofen
 Westig i. Westf.
@@ -20168,7 +19635,6 @@ Wettin-Löbejün
 Wettiner
 Wettingen
 Wettlingen
-Wettringen
 Wettringen
 Wettrup
 Wettstetten
@@ -20268,7 +19734,6 @@ Wiesen
 Wiesenau
 Wiesenaue
 Wiesenbach
-Wiesenbach
 Wiesenbronn
 Wiesenburg
 Wiesenburg/Mark
@@ -20307,7 +19772,6 @@ Wild
 Wildau
 Wildbad
 Wildberg
-Wildberg
 Wildberg-Hohenburg
 Wildeck
 Wildenau
@@ -20334,8 +19798,6 @@ Wildura Australia
 Wilflingen
 Wilgartswiesen
 Wilhelmsburg
-Wilhelmsdorf
-Wilhelmsdorf
 Wilhelmsdorf
 Wilhelmsfeld
 Wilhelmshausen
@@ -20399,7 +19861,6 @@ Windecken
 Windeln zu Lauterbach
 Windelsbach
 Winden
-Winden
 Winden im Elztal
 Windesheim
 Windhagen
@@ -20448,8 +19909,6 @@ Winsen (Luhe)
 Winsen a. Luhe
 Winter
 Winterbach
-Winterbach
-Winterbach
 Winterbach (Pfalz)
 Winterberg
 Winterborn
@@ -20493,7 +19952,6 @@ Wirscheid
 Wirschweiler
 Wirziburgo
 Wisaha
-Wisch
 Wisch
 Wischhafen
 Wiselbeck
@@ -20655,8 +20113,6 @@ Wolpertswende
 Wolsdorf
 Wolsfeld
 Woltersdorf
-Woltersdorf
-Woltersdorf
 Wolverhampton
 Wolzogen
 Womrath
@@ -20727,8 +20183,6 @@ Wusterhausen/Dosse
 Wusterhusen
 Wustermark
 Wusterwitz
-Wustrow
-Wustrow
 Wustrow
 Wutach
 Wutha
@@ -20952,8 +20406,6 @@ Zierzow
 Ziesar
 Ziesendorf
 Ziethen
-Ziethen
-Ziethen
 Zilaristal
 Zilgide
 Zilhart
@@ -21054,7 +20506,6 @@ Zwiefaltendorf
 Zwierlein
 Zwiesel
 Zwingen
-Zwingenberg
 Zwingenberg
 Zwönitz
 Zyfflich-Wyler

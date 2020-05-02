@@ -1,40 +1,17 @@
 import os
 import re
 
+CITIES_FILENAME = "cities_1.txt"
+
 
 def get_all_cities():
-    with open("cities_1.txt", encoding="utf-8") as f:
+    with open(CITIES_FILENAME, encoding="utf-8") as f:
         return set([i.strip() for i in f.read().split("\n")])
-
-
-# print([i for i in get_all_cities() if len(i) < 3])
 
 
 def delete_symbols_and_split(middle, symbols):
     table = str.maketrans('', '', symbols)
     return [i for i in [w.translate(table) for w in middle.strip().lower().split(" ")] if len(i) > 0]
-
-
-def get_tanimoto(middle, city):
-    res = []
-    b = len(city)
-
-    words = delete_symbols_and_split(middle, ",.")
-
-    for i in words:
-
-        m = list(i)
-
-        a = len(i)
-        c = 0
-        for k in city.lower():
-            if k in m:
-                c += 1
-                m.remove(k)
-
-        res.append((round(c / (a + b - c), 2), i))
-
-    return res
 
 
 def make_n_gramm(s, n=3):
@@ -111,10 +88,6 @@ def filter_cities(cities_with_word):
     return res
 
 
-# for i in "Arfeld,Frundsberg,Freundsberg,Adler,Arzfeld,Sonderburg,Rendsburg".split(","):
-#     print(i, get_n_gramm(" Alfred Scholz, Rendsburg, Verfahren und Vorrichtung zur Herstellung von Entfärbungskohle. ", i))
-
-
 re_id = r'\d{1,2}(\.|,|-)( )?([A-Z]|Sch|St|Sp)(\.|,|-)( )?\d{5,6}(\.|,|-)'
 re_date = r"[0-9]{1,2}(\.|,| )( )*[0-9]{1,2}(\.| |,)( )*[0-9]{1,2}[^0-9]"
 
@@ -185,7 +158,6 @@ for y in years:
                 else:
                     city_str = ",".join([i[0] for i in cities])
 
-
                 if city_str.count(',') > 1:
                     cities = city_str.split(',')
 
@@ -209,14 +181,7 @@ for y in years:
                 else:
                     min = city_str
 
-
-
                 res.append([num, classes, pat_id, middle, pat_date, min])
-
-# [print(i) for i in res]
-
-# # for i in res:
-# #     print("\t".join(i))
 
 import xlsxwriter
 
