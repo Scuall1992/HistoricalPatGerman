@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5415a0ac-5a1a-4288-8223-62d5d29f67d0" name="Default Changelist" comment="">
+    <list default="true" id="5415a0ac-5a1a-4288-8223-62d5d29f67d0" name="Default Changelist" comment="Сохранение перед запуском всего парсинга">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/untitled.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/untitled.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/check_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/check_files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/get_data_by_year.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_data_by_year.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parallel_run.py" beforeDir="false" afterPath="$PROJECT_DIR$/parallel_run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parse_one_pdf.py" beforeDir="false" afterPath="$PROJECT_DIR$/parse_one_pdf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/replace_cases" beforeDir="false" afterPath="$PROJECT_DIR$/replace_cases" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/split_csv_by_chapters.py" beforeDir="false" afterPath="$PROJECT_DIR$/split_csv_by_chapters.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,53 +31,27 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Maria\PycharmProjects\untitled" />
+      <recent name="C:\Users\scual\PycharmProjects\untitled" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\scual\PycharmProjects\untitled" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\scual\PycharmProjects\untitled" />
-    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.split_csv_by_chapters">
-    <configuration name="123" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="untitled" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/123.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.get_data_by_year">
     <configuration name="check_files" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -104,7 +73,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="clean_csv" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="get_data_by_year" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -116,7 +85,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clean_csv.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/get_data_by_year.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -138,6 +107,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parallel_run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="parse_one_pdf" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parse_one_pdf.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -169,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.get_data_by_year" />
+        <item itemvalue="Python.parallel_run" />
+        <item itemvalue="Python.parse_one_pdf" />
         <item itemvalue="Python.split_csv_by_chapters" />
         <item itemvalue="Python.check_files" />
-        <item itemvalue="Python.parallel_run" />
-        <item itemvalue="Python.clean_csv" />
-        <item itemvalue="Python.123" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +234,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573070365035</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Добавили н-граммы для проверки на соответствие городов">
+      <created>1588264869300</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1588264869300</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Добавил 2-3-4 граммы">
+      <created>1588430504120</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1588430504122</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -272,7 +276,88 @@
     <MESSAGE value="Изменил разбивку, в датах есть запятые.&#10;Добавил многопоточность, чтобы быстрее обрабатывать файлы" />
     <MESSAGE value="Изменил разбивку, в датах есть запятые.&#10;Добавил многопоточность, чтобы быстрее обрабатывать файлы. Добавил файлы" />
     <MESSAGE value="Получилось распарсить 51 неделю 1926 года часть анмелдумен" />
-    <option name="LAST_COMMIT_MESSAGE" value="Получилось распарсить 51 неделю 1926 года часть анмелдумен" />
+    <MESSAGE value="Сохранение перед запуском всего парсинга" />
+    <MESSAGE value="Добавили н-граммы для проверки на соответствие городов" />
+    <MESSAGE value="Добавил 2-3-4 граммы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил 2-3-4 граммы" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="371" y="125" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1588008052113">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="125" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1588008052113" />
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1588430503007">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1588430503007" />
+    <state width="1278" height="440" key="DebuggerActiveHint" timestamp="1588269639694">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1278" height="440" key="DebuggerActiveHint/0.0.1280.680@0.0.1280.680" timestamp="1588269639694" />
+    <state width="1259" height="244" key="GridCell.Tab.0.bottom" timestamp="1588584535436">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="244" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1588584535436" />
+    <state width="1259" height="244" key="GridCell.Tab.0.center" timestamp="1588584535436">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="244" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1588584535436" />
+    <state width="1259" height="244" key="GridCell.Tab.0.left" timestamp="1588584535435">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="244" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1588584535435" />
+    <state width="1259" height="244" key="GridCell.Tab.0.right" timestamp="1588584535436">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="244" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1588584535436" />
+    <state width="1259" height="278" key="GridCell.Tab.1.bottom" timestamp="1588582394654">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="278" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1588582394654" />
+    <state width="1259" height="278" key="GridCell.Tab.1.center" timestamp="1588582394654">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="278" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1588582394654" />
+    <state width="1259" height="278" key="GridCell.Tab.1.left" timestamp="1588582394654">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="278" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1588582394654" />
+    <state width="1259" height="278" key="GridCell.Tab.1.right" timestamp="1588582394654">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1259" height="278" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1588582394654" />
+    <state x="455" y="52" key="RollbackChangesDialog" timestamp="1587036867130">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="455" y="52" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1587036867130" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1587036911494">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1587036911494" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1588430506196">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1588430506196" />
+    <state x="93" y="93" width="1095" height="495" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588581598251">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="93" y="93" width="1095" height="495" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1280.680@0.0.1280.680" timestamp="1588581598251" />
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1584307612513">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="336" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1584307612513" />
+    <state x="213" y="77" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1588008056011">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="213" y="77" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680@0.0.1280.680" timestamp="1588008056011" />
+    <state x="0" y="0" width="609" height="680" key="find.popup" timestamp="1585725835596">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="0" width="609" height="680" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1585725835596" />
+    <state x="369" y="132" key="git4idea.merge.GitPullDialog" timestamp="1588578702711">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="369" y="132" key="git4idea.merge.GitPullDialog/0.0.1280.680@0.0.1280.680" timestamp="1588578702711" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -281,16 +366,6 @@
           <url>file://C:/Pardes/1.py</url>
           <line>11</line>
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/split_csv_by_chapters.py</url>
-          <line>98</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/split_csv_by_chapters.py</url>
-          <line>47</line>
-          <option name="timeStamp" value="29" />
         </line-breakpoint>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="builtins.MemoryError">
@@ -304,13 +379,19 @@
           </properties>
           <option name="timeStamp" value="20" />
         </breakpoint>
+        <breakpoint enabled="true" type="python-exception">
+          <properties notifyOnTerminate="true" exception="builtins.IndexError">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+          <option name="timeStamp" value="25" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="len(anmel[i])" language="Python" />
-        <watch expression="anmel[i]" language="Python" />
-        <watch expression="re.search(r'[0-9]{3}(\.|,)', anmel[i])" language="Python" />
+        <watch expression="middle" language="Python" />
+        <watch expression="n_gramm_by_cities[i]" language="Python" />
+        <watch expression="[i for i in cities if i[0] =='Stelle']" language="Python" />
       </configuration>
     </watches-manager>
   </component>

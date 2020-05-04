@@ -2,6 +2,9 @@ import os
 import re
 
 CITIES_FILENAME = "cities_1.txt"
+NORMAL = 1
+INTERNATIONAL = 2
+FEW_AUTHORS = 3
 
 
 def get_all_cities():
@@ -65,6 +68,16 @@ def get_n_gramm(middle, city):
 #     "Paris; Bertr,: K. Osius u, Nr. A. Zehden, Pat.-Anwälte, Berlin SW11. Entstaubungsanlage für Kohle und andere körnige Stoffe.",
 #     "Par-ris")
 
+def determine_patent(middle):  # 1-normal, 2-international, 3-few_authors
+    res = NORMAL
+
+    with open("international_criteria.txt") as f:
+        criteria = f.read().split("\n")
+        if any([i in middle for i in criteria]):
+            res = INTERNATIONAL
+
+    return res
+
 
 def filter_cities(cities_with_word):
     buf = dict()
@@ -88,6 +101,51 @@ def filter_cities(cities_with_word):
     return res
 
 
+def extract_city(middle):
+    n_gramm_by_cities = dict()
+
+    cities = []
+
+    for c in get_all_cities():
+
+        croped = middle.split(",")
+
+        n_gramm_by_cities[c] = get_n_gramm(middle if len(croped) <= 1 else ",".join(croped[1:]), c)
+
+        occurences = list(filter(lambda x: x[0] >= 0.9, n_gramm_by_cities[c]))
+
+        if len(occurences) > 0:
+            cities.append((c, occurences))
+
+
+    max_index = 0
+    max_city = ''
+
+    for city, occur in cities:
+        for j in occur:
+            if j[0] > max_index:
+                max_index = j[0]
+
+    cit = []
+    for city, occur in cities:
+        for j in occur:
+            if j[0] == max_index:
+                cit.append(city)
+
+    return [num, classes, pat_id, middle, pat_date, ",".join(cit)]
+
+
+
+
+    # if len(cities) > 1:
+    #     # если совпадение прошло по одному и тому же слову, то надо выбрать с максимальным коэфициентом
+    #     city_str = ",".join([i[0] for i in filter_cities(cities)])
+    # else:
+    #     city_str = ",".join([i[0] for i in cities])
+
+    # return [num, classes, pat_id, middle, pat_date, max_city]
+
+
 re_id = r'\d{1,2}(\.|,|-)( )?([A-Z]|Sch|St|Sp)(\.|,|-)( )?\d{5,6}(\.|,|-)'
 re_date = r"[0-9]{1,2}(\.|,| )( )*[0-9]{1,2}(\.| |,)( )*[0-9]{1,2}[^0-9]"
 
@@ -97,8 +155,6 @@ folder = "C:\\patents"
 
 # years = map(str, list(range(1925, 1928 + 1)))
 years = ["1925"]
-
-all_cities = get_all_cities()
 
 for y in years:
     FOLDER = os.path.join(folder, y)
@@ -123,6 +179,9 @@ for y in years:
 
                 middle = re.sub(re_date, '', re.sub(re_id, '', line))
 
+                if determine_patent(middle) != NORMAL:
+                    continue
+
                 re_classes = r"(\,|.) "
 
                 try:
@@ -133,55 +192,10 @@ for y in years:
 
                 num = re.search(r"\d+", f).group(0)
 
-                cities = []
-
                 if len(middle) == 0:
                     continue
 
-                n_gramm_by_cities = dict()
-
-                for c in all_cities:
-
-                    croped = middle.split(",")
-
-                    n_gramm_by_cities[c] = get_n_gramm(middle if len(croped) <= 1 else ",".join(croped[1:3]), c)
-
-                    occurences = list(filter(lambda x: x[0] >= 0.6, n_gramm_by_cities[c]))
-                    # n_gramm = get_n_gramm(middle if len(croped) <= 1 else ",".join(croped[1:]) , c)
-
-                    if len(occurences) > 0:
-                        cities.append((c, occurences))
-
-                if len(cities) > 1:
-                    # если совпадение прошло по одному и тому же слову, то надо выбрать с максимальным коэфициентом
-                    city_str = ",".join([i[0] for i in filter_cities(cities)])
-                else:
-                    city_str = ",".join([i[0] for i in cities])
-
-                if city_str.count(',') > 1:
-                    cities = city_str.split(',')
-
-                    i_min = 0
-                    min = ""
-
-                    new_middle = middle.lower()
-                    for c in cities:
-                        n = max([i[0] for i in n_gramm_by_cities[c]])
-                        m = ""
-                        for a in n_gramm_by_cities[c]:
-                            if n == a[0]:
-                                m = a[1]
-                                break
-                        fff = new_middle.find(m)
-
-                        if fff < i_min:
-                            i_min = fff
-                            min = m
-
-                else:
-                    min = city_str
-
-                res.append([num, classes, pat_id, middle, pat_date, min])
+                res.append(extract_city(middle))
 
 import xlsxwriter
 
