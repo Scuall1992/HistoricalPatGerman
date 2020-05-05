@@ -1,5 +1,6 @@
 import os
 import re
+import xlsxwriter
 
 CITIES_FILENAME = "cities_1.txt"
 NORMAL = 1
@@ -58,8 +59,16 @@ def get_n_gramm(middle, city):
     weights = [1.50, 1.80, 2.0]
 
     if len(balls) > 0:
-        res.extend(
-            [(sum([round(v[j][0] * weights[j], 2) for j in range(len(v))]) / len(v), k) for k, v in balls.items()])
+
+        for k, v in balls.items():
+
+            ind_res = 99*99
+            try:
+                ind_res = middle.lower().index(k)
+            except ValueError:
+                pass
+
+            res.extend([(sum([round(v[j][0] * weights[j], 2) for j in range(len(v))]) / len(v), k, ind_res)])
 
     return res
 
@@ -106,20 +115,21 @@ def extract_city(middle):
 
     cities = []
 
+    while "-" in middle:
+        middle = middle.replace("-", "")
+
     for c in get_all_cities():
 
         croped = middle.split(",")
 
         n_gramm_by_cities[c] = get_n_gramm(middle if len(croped) <= 1 else ",".join(croped[1:]), c)
 
-        occurences = list(filter(lambda x: x[0] >= 0.9, n_gramm_by_cities[c]))
+        occurences = list(filter(lambda x: x[0] >= 0.8, n_gramm_by_cities[c]))
 
         if len(occurences) > 0:
             cities.append((c, occurences))
 
-
     max_index = 0
-    max_city = ''
 
     for city, occur in cities:
         for j in occur:
@@ -130,40 +140,39 @@ def extract_city(middle):
     for city, occur in cities:
         for j in occur:
             if j[0] == max_index:
-                cit.append(city)
+                cit.append((city, j[2]))
 
-    return [num, classes, pat_id, middle, pat_date, ",".join(cit)]
+    min_city = cit[0][1]
+    city_res = cit[0][0]
+    for i in cit:
+        if i[1] < min_city:
+            min_city = i[1]
+            city_res = i[0]
 
-
-
-
-    # if len(cities) > 1:
-    #     # если совпадение прошло по одному и тому же слову, то надо выбрать с максимальным коэфициентом
-    #     city_str = ",".join([i[0] for i in filter_cities(cities)])
-    # else:
-    #     city_str = ",".join([i[0] for i in cities])
-
-    # return [num, classes, pat_id, middle, pat_date, max_city]
+    return [num, classes, pat_id, middle, pat_date, city_res]
 
 
 re_id = r'\d{1,2}(\.|,|-)( )?([A-Z]|Sch|St|Sp)(\.|,|-)( )?\d{5,6}(\.|,|-)'
 re_date = r"[0-9]{1,2}(\.|,| )( )*[0-9]{1,2}(\.| |,)( )*[0-9]{1,2}[^0-9]"
 
-res = []
-
 folder = "C:\\patents"
 
 # years = map(str, list(range(1925, 1928 + 1)))
-years = ["1925"]
+years = ["1926"]
+
+WEEKS = 2
+LINES = 30
+
 
 for y in years:
     FOLDER = os.path.join(folder, y)
 
-    for f in list(filter(lambda x: "result" in x, os.listdir(FOLDER)))[:1]:
+    for f in list(filter(lambda x: "result" in x, os.listdir(FOLDER)))[:WEEKS]:
+        res = []
         with open(os.path.join(FOLDER, f), encoding="utf-8") as ff:
             lines = ff.read().split("\n")
 
-            for line in lines[:-1][:50]:
+            for line in lines[:-1][:LINES]:
                 line = line.replace("2s", "25").replace("2S", "25")
 
                 pat_id = ""
@@ -197,23 +206,21 @@ for y in years:
 
                 res.append(extract_city(middle))
 
-import xlsxwriter
+        # Create a workbook and add a worksheet.
+        workbook = xlsxwriter.Workbook(f'parsed\\{f}_parsed.xlsx')
 
-# Create a workbook and add a worksheet.
-workbook = xlsxwriter.Workbook('patent.xlsx')
+        worksheet = workbook.add_worksheet()
 
-worksheet = workbook.add_worksheet()
+        # Start from the first cell. Rows and columns are zero indexed.
+        row = 0
 
-# Start from the first cell. Rows and columns are zero indexed.
-row = 0
+        # Iterate over the data and write it out row by row.
+        for i in res:
+            col = 0
+            for j in i:
+                worksheet.write(row, col, j)
+                col += 1
 
-# Iterate over the data and write it out row by row.
-for i in res:
-    col = 0
-    for j in i:
-        worksheet.write(row, col, j)
-        col += 1
+            row += 1
 
-    row += 1
-
-workbook.close()
+        workbook.close()

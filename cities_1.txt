@@ -3445,7 +3445,6 @@ Dickenschied
 Dickesbach
 Didderse
 Didelzheim
-Die
 Diebach
 Dieblich
 Dieburg
@@ -8863,7 +8862,7 @@ Kettershausen
 Kettig
 Kettschau
 Kettwig a. d. Ruhr
-Ketzin
+KetzinVaerl
 Ketzin a. d. Havel
 Ketzin/Havel
 Keudell von Schwebda
