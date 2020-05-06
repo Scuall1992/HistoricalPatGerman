@@ -142,12 +142,17 @@ def extract_city(middle):
             if j[0] == max_index:
                 cit.append((city, j[2]))
 
-    min_city = cit[0][1]
-    city_res = cit[0][0]
-    for i in cit:
-        if i[1] < min_city:
-            min_city = i[1]
-            city_res = i[0]
+
+    min_city = 0
+    city_res = ""
+
+    if len(cit) > 0 and len(cit[0]) > 1:
+        min_city = cit[0][1]
+        city_res = cit[0][0]
+        for i in cit:
+            if i[1] < min_city:
+                min_city = i[1]
+                city_res = i[0]
 
     return [num, classes, pat_id, middle, pat_date, city_res]
 
@@ -160,14 +165,14 @@ folder = "C:\\patents"
 # years = map(str, list(range(1925, 1928 + 1)))
 years = ["1926"]
 
-WEEKS = 2
-LINES = 30
+WEEKS = 100
+LINES = 5000
 
 
 for y in years:
     FOLDER = os.path.join(folder, y)
 
-    for f in list(filter(lambda x: "result" in x, os.listdir(FOLDER)))[:WEEKS]:
+    for f in list(filter(lambda x: "result" in x, os.listdir(FOLDER)))[1:WEEKS]:
         res = []
         with open(os.path.join(FOLDER, f), encoding="utf-8") as ff:
             lines = ff.read().split("\n")
