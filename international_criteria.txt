@@ -1,7 +1,4 @@
-Vertr.:
-Vertr,:
-Bertr.:
-Bertr,:
+Bertr
 Pat.-Anwälte
 Pat,-Anwälte
 Pat,°Anw
@@ -10,3 +7,6 @@ Pat.° Anwälte
 Pat,° Anwälte
 Pat.-Anw
 Pat,-Anw
+Nertr
+Vertr
+Veitr

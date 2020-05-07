@@ -2,6 +2,8 @@ import os
 import re
 import xlsxwriter
 
+from multiprocessing import Process, Pool
+
 CITIES_FILENAME = "cities_1.txt"
 NORMAL = 1
 INTERNATIONAL = 2
@@ -62,7 +64,7 @@ def get_n_gramm(middle, city):
 
         for k, v in balls.items():
 
-            ind_res = 99*99
+            ind_res = 99 * 99
             try:
                 ind_res = middle.lower().index(k)
             except ValueError:
@@ -142,7 +144,6 @@ def extract_city(middle):
             if j[0] == max_index:
                 cit.append((city, j[2]))
 
-
     min_city = 0
     city_res = ""
 
@@ -154,7 +155,8 @@ def extract_city(middle):
                 min_city = i[1]
                 city_res = i[0]
 
-    return [num, classes, pat_id, middle, pat_date, city_res]
+    # return [num, classes, pat_id, middle, pat_date, city_res]
+    return city_res
 
 
 re_id = r'\d{1,2}(\.|,|-)( )?([A-Z]|Sch|St|Sp)(\.|,|-)( )?\d{5,6}(\.|,|-)'
@@ -163,69 +165,99 @@ re_date = r"[0-9]{1,2}(\.|,| )( )*[0-9]{1,2}(\.| |,)( )*[0-9]{1,2}[^0-9]"
 folder = "C:\\patents"
 
 # years = map(str, list(range(1925, 1928 + 1)))
-years = ["1926"]
+years = ["1927", "1928"]
 
 WEEKS = 100
 LINES = 5000
 
+replace_cases = [("2s", "25"), ("2S", "25"), ("Neilin", "Berlin"),
+                 ("Nerlin", "Berlin"), ("¬ ", ""), ("Berlm", "Berlin")]
 
-for y in years:
-    FOLDER = os.path.join(folder, y)
 
-    for f in list(filter(lambda x: "result" in x, os.listdir(FOLDER)))[1:WEEKS]:
-        res = []
-        with open(os.path.join(FOLDER, f), encoding="utf-8") as ff:
-            lines = ff.read().split("\n")
+def run_parse(FOLDER, f):
+    res = []
+    with open(os.path.join(FOLDER, f), encoding="utf-8") as ff:
+        lines = ff.read().split("\n")
 
-            for line in lines[:-1][:LINES]:
-                line = line.replace("2s", "25").replace("2S", "25")
+        for line in lines[:-1][:LINES]:
+            for repl in replace_cases:
+                line = line.replace(*repl)
 
-                pat_id = ""
-                pat_date = ""
+            pat_id = ""
+            pat_date = ""
 
-                mat_id = re.search(re_id, line)
-                if mat_id is not None:
-                    pat_id = mat_id.group(0)
+            mat_id = re.search(re_id, line)
+            if mat_id is not None:
+                pat_id = mat_id.group(0)
 
-                mat_date = re.search(re_date, line)
-                if mat_date is not None:
-                    pat_date = mat_date.group(0)
+            mat_date = re.search(re_date, line)
+            if mat_date is not None:
+                pat_date = mat_date.group(0)
 
-                middle = re.sub(re_date, '', re.sub(re_id, '', line))
+            middle = re.sub(re_date, '', re.sub(re_id, '', line))
 
-                if determine_patent(middle) != NORMAL:
-                    continue
+            if determine_patent(middle) != NORMAL:
+                continue
 
-                re_classes = r"(\,|.) "
+            re_classes = r"(\,|.) "
 
-                try:
-                    s = re.subn(re_classes, "$$$$", middle, count=1)
-                    classes, middle = s[0].split("$$$$")
-                except ValueError as e:
-                    pass
+            try:
+                s = re.subn(re_classes, "$$$$", middle, count=1)
+                classes, middle = s[0].split("$$$$")
+            except ValueError as e:
+                pass
 
-                num = re.search(r"\d+", f).group(0)
+            num = re.search(r"\d+", f).group(0)
 
-                if len(middle) == 0:
-                    continue
+            if len(middle) == 0:
+                continue
 
-                res.append(extract_city(middle))
+            # return [num, classes, pat_id, middle, pat_date, city_res]
 
-        # Create a workbook and add a worksheet.
-        workbook = xlsxwriter.Workbook(f'parsed\\{f}_parsed.xlsx')
+            res.append([num, classes, pat_id, middle, pat_date, extract_city(middle)])
 
-        worksheet = workbook.add_worksheet()
+    # Create a workbook and add a worksheet.
+    workbook = xlsxwriter.Workbook(f'parsed\\{f}_parsed.xlsx')
 
-        # Start from the first cell. Rows and columns are zero indexed.
-        row = 0
+    worksheet = workbook.add_worksheet()
 
-        # Iterate over the data and write it out row by row.
-        for i in res:
-            col = 0
-            for j in i:
-                worksheet.write(row, col, j)
-                col += 1
+    # Start from the first cell. Rows and columns are zero indexed.
+    row = 0
 
-            row += 1
+    # Iterate over the data and write it out row by row.
+    for i in res:
+        col = 0
+        for j in i:
+            worksheet.write(row, col, j)
+            col += 1
 
-        workbook.close()
+        row += 1
+
+    workbook.close()
+
+#
+# if __name__ == '__main__':
+#     procs = []
+#     for y in years:
+#         FOLDER = os.path.join(folder, y)
+#
+#         for f in list(filter(lambda x: "result" in x, os.listdir(FOLDER)))[17:WEEKS]:
+#             proc = Process(target=run_parse, args=(FOLDER, f))
+#             procs.append(proc)
+#             proc.start()
+#
+#         for proc in procs:
+#             proc.join()
+
+
+if __name__ == '__main__':
+    with Pool(10) as p:
+        args = []
+        for y in years:
+            FOLDER = os.path.join(folder, y)
+
+            for f in list(filter(lambda x: "result" in x, os.listdir(FOLDER)))[:WEEKS]:
+                args.append((FOLDER, f))
+
+
+        p.starmap(run_parse, args)

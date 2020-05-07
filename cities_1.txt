@@ -1306,11 +1306,6 @@ Beierstedt
 Beigzabern
 Beigzabern Pfalz
 Beihingen
-Beilin
-Beilin-Lichtenberg
-Beilin-Schöneberg
-Beilin-Siemensstadt
-Beilin-Weißensee
 Beilingen
 Beilngries
 Beilrode
@@ -2195,7 +2190,6 @@ Brasseur
 Bratislava
 Braubach
 Braubach de Lénoncourt
-Braun
 Braunau am Inn
 Brauneberg
 Brauneck
@@ -2680,7 +2674,6 @@ Buxheim
 Buxtehude
 Buß
 Bußmannshausen
-Bvaunschweig
 Bydgö b. Christiania
 Byhleguhre-Byhlen
 Báthory
@@ -4714,7 +4707,6 @@ Fahlheim
 Fahnenberg
 Fahr
 Fahrdorf
-Fahren
 Fahrenbach
 Fahrenhorst
 Fahrenkrug
@@ -8695,7 +8687,6 @@ Karenz
 Karg von Bebenburg
 Kargegg
 Kargow
-Karl
 Karl-Marx-Stadt
 Karlsbad
 Karlsberg
@@ -16069,7 +16060,6 @@ Schmidberg
 Schmidburg
 Schmidgaden
 Schmidmühlen
-Schmidt
 Schmidt auf Altenstadt
 Schmidt von Eisenberg
 Schmidtburg
@@ -16115,7 +16105,6 @@ Schneeburg
 Schnega
 Schneidemühl
 Schneidenhain
-Schneider
 Schneidhain
 Schneidlingen
 Schneitheim
@@ -16561,7 +16550,6 @@ Seiffen/Erzgebirge
 Seifhennersdorf
 Seifriedsberg
 Seillegau
-Seine
 Seine et Oife
 Seinsfeld
 Seinsheim
@@ -20018,7 +20006,6 @@ Witzwort
 Witzwort Mühle
 Wißgoldingen
 Wißmannsdorf
-Wladimir
 Wlaschim
 Wlist i. Holstein
 Wobbenbüll
