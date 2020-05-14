@@ -11,10 +11,11 @@ def replace_smht(s, what):
 
 LENGTH_OF_LINE = 45  # if less, then add to previous line
 
-args = argparse.ArgumentParser()
-args.add_argument("filename", type=str)
+# args = argparse.ArgumentParser()
+# args.add_argument("filename", type=str)
 
-FOLDER = args.parse_args().filename
+FOLDER = r"C:\patents\1928"
+# FOLDER = args.parse_args().filename
 
 lines = []
 
@@ -34,9 +35,10 @@ for i in os.listdir(FOLDER):
         with open(os.path.join(FOLDER, i), "w", encoding="utf-8") as f:
             f.write("\n".join(lines))
 
-a = ["Erteilungen.", "Erteilungen/", "Versagungen.", "Erteilungen*)"]
 
-b = ["Anmeldungen.", "Anmelllungen."]
+a = ["Erteilungen.", "Erteilungen/", "Versagungen.", "Erteilungen*)", "Erteilungen.*)", "Erteilungen')"]
+
+b = ["Anmeldungen.", "Anmelllungen.", "von Anmeldungen"]
 
 # c = "Löschungen."
 

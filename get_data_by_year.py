@@ -165,7 +165,7 @@ re_date = r"[0-9]{1,2}(\.|,| )( )*[0-9]{1,2}(\.| |,)( )*[0-9]{1,2}[^0-9]"
 folder = "C:\\patents"
 
 # years = map(str, list(range(1925, 1928 + 1)))
-years = ["1927", "1928"]
+years = ["1928"]
 
 WEEKS = 100
 LINES = 5000
@@ -251,13 +251,17 @@ def run_parse(FOLDER, f):
 
 
 if __name__ == '__main__':
+    parsed_files = os.listdir("parsed")
     with Pool(10) as p:
         args = []
         for y in years:
             FOLDER = os.path.join(folder, y)
 
             for f in list(filter(lambda x: "result" in x, os.listdir(FOLDER)))[:WEEKS]:
-                args.append((FOLDER, f))
+
+                if all([f not in pf for pf in parsed_files]):
+
+                    args.append((FOLDER, f))
 
 
         p.starmap(run_parse, args)
