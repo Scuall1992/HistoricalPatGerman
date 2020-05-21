@@ -13,11 +13,11 @@ def run_script_folder(filename):
 
 
 if __name__ == '__main__':
-    FOLDER = "C:\\patents"
-    years = map(str, list(range(1907, 1909)))
+    FOLDER = "."
+    years = map(str, list(range(1907, 1945)))
 
     for y in years:
         [run_script(os.path.join(FOLDER, y, i)) for i in os.listdir(os.path.join(FOLDER, y)) if i.endswith('.pdf')]
 
-    for y in years:
-        run_script_folder(os.path.join(FOLDER, y))
+    # for y in years:
+    #     run_script_folder(os.path.join(FOLDER, y))

@@ -162,10 +162,10 @@ def extract_city(middle):
 re_id = r'\d{1,2}(\.|,|-)( )?([A-Z]|Sch|St|Sp)(\.|,|-)( )?\d{5,6}(\.|,|-)'
 re_date = r"[0-9]{1,2}(\.|,| )( )*[0-9]{1,2}(\.| |,)( )*[0-9]{1,2}[^0-9]"
 
-folder = "C:\\patents"
+folder = "."
 
 # years = map(str, list(range(1925, 1928 + 1)))
-years = ["1928"]
+years = ["1907"]
 
 WEEKS = 100
 LINES = 5000
