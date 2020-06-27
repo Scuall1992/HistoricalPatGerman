@@ -164,17 +164,17 @@ re_date = r"[0-9]{1,2}(\.|,| )( )*[0-9]{1,2}(\.| |,)( )*[0-9]{1,2}[^0-9]"
 
 folder = "."
 
-# years = map(str, list(range(1925, 1928 + 1)))
-years = ["1907"]
+#years = map(str, list(range(1907, 1945 + 1)))
+years = ["1926", "1927"]
 
 WEEKS = 100
 LINES = 5000
 
 replace_cases = [("2s", "25"), ("2S", "25"), ("Neilin", "Berlin"),
-                 ("Nerlin", "Berlin"), ("¬ ", ""), ("Berlm", "Berlin")]
+                 ("Nerlin", "Berlin"), ("¬ ", ''), ("Berlm", "Berlin")]
 
 
-def run_parse(FOLDER, f):
+def run_parse(FOLDER, f, year):
     res = []
     with open(os.path.join(FOLDER, f), encoding="utf-8") as ff:
         lines = ff.read().split("\n")
@@ -217,7 +217,7 @@ def run_parse(FOLDER, f):
             res.append([num, classes, pat_id, middle, pat_date, extract_city(middle)])
 
     # Create a workbook and add a worksheet.
-    workbook = xlsxwriter.Workbook(f'parsed\\{f}_parsed.xlsx')
+    workbook = xlsxwriter.Workbook(os.path.join("parsed", year, f"{f}_parsed.xlsx"))
 
     worksheet = workbook.add_worksheet()
 
@@ -235,33 +235,21 @@ def run_parse(FOLDER, f):
 
     workbook.close()
 
-#
-# if __name__ == '__main__':
-#     procs = []
-#     for y in years:
-#         FOLDER = os.path.join(folder, y)
-#
-#         for f in list(filter(lambda x: "result" in x, os.listdir(FOLDER)))[17:WEEKS]:
-#             proc = Process(target=run_parse, args=(FOLDER, f))
-#             procs.append(proc)
-#             proc.start()
-#
-#         for proc in procs:
-#             proc.join()
-
 
 if __name__ == '__main__':
     parsed_files = os.listdir("parsed")
     with Pool(10) as p:
         args = []
         for y in years:
+            if not os.path.exists(os.path.join("parsed", y)):
+                os.mkdir(os.path.join("parsed", y))
             FOLDER = os.path.join(folder, y)
 
             for f in list(filter(lambda x: "result" in x, os.listdir(FOLDER)))[:WEEKS]:
 
                 if all([f not in pf for pf in parsed_files]):
 
-                    args.append((FOLDER, f))
+                    args.append((FOLDER, f, y))
 
 
         p.starmap(run_parse, args)

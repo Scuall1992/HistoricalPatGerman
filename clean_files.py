@@ -36,9 +36,11 @@ for i in os.listdir(FOLDER):
             f.write("\n".join(lines))
 
 
-a = ["Erteilungen.", "Erteilungen/", "Versagungen.", "Erteilungen*)", "Erteilungen.*)", "Erteilungen')"]
+a = ["Erteilungen.", "Erteilungen/", "Versagungen.", "Erteilungen*)", "Erteilungen.*)", "Erteilungen')", "Erteilungen",
+     "Erleilungen'", "ErleAngen'", "hierunter angegebenen"]
 
-b = ["Anmeldungen.", "Anmelllungen.", "von Anmeldungen"]
+b = ["Anmeldungen.", "Anmelllungen.", "von Anmeldungen", "van Anmelllumen", "Anmelüuugen", "von Anmelllungen",
+     "von Anmeldunzen"]
 
 # c = "Löschungen."
 
