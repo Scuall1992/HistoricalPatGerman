@@ -14,12 +14,6 @@ determ_labels = {
     FEW_AUTHORS: "FEW_AUTHORS"
 }
 
-
-
-
-re_id = r'\d{1,2}(\.|,|-)( )?([A-Z]|Sch|St|Sp)(\.|,|-)( )?\d{5,6}(\.|,|-)'
-re_date = r"[0-9]{1,2}(\.|,| )( )*[0-9]{1,2}(\.| |,)( )*[0-9]{1,2}[^0-9]"
-
 folder = "."
 
 #years = map(str, list(range(1907, 1945 + 1)))
@@ -102,10 +96,6 @@ def get_n_gramm(middle, city):
     return res
 
 
-# get_n_gramm(
-#     "Paris; Bertr,: K. Osius u, Nr. A. Zehden, Pat.-Anwälte, Berlin SW11. Entstaubungsanlage für Kohle und andere körnige Stoffe.",
-#     "Par-ris")
-
 def determine_patent(middle):  # 1-normal, 2-international, 3-few_authors
 
     with open("international_criteria.txt") as f:
@@ -123,6 +113,7 @@ def determine_patent(middle):  # 1-normal, 2-international, 3-few_authors
 
 
 def extract_city(middle, count=1):
+    '''Вытащить из мидла город или города '''
     n_gramm_by_cities = dict()
 
     cities = []
@@ -174,10 +165,11 @@ def extract_city(middle, count=1):
 
         city_res = ", ".join([city_res, city_res2])
     log(cit)
-    # return [num, classes, pat_id, middle, pat_date, city_res]
+    
     return city_res
 
 def write_to_xlsx(f, year, res):
+    '''Записать данные в ексель'''
     # Create a workbook and add a worksheet.
     log(f"Write to file {f}_parsed.xlsx")
     workbook = xlsxwriter.Workbook(os.path.join("parsed", year, f"{f}_parsed.xlsx"))
@@ -200,10 +192,68 @@ def write_to_xlsx(f, year, res):
 
 
 def _search_by_regex(pattern, line):
+    '''Вернуть то, что подходит под паттерн регулярки'''
     mat_id = re.search(pattern, line)
     if mat_id is not None:
         return mat_id.group(0)
     return ""
+
+
+re_id = r'\d{1,2}(\.|,|-)( )?([A-Z]|Sch|St|Sp)(\.|,|-)( )?\d{5,6}(\.|,|-)'
+re_date = r"[0-9]{1,2}(\.|,| )( )*[0-9]{1,2}(\.| |,)( )*[0-9]{1,2}[^0-9]"
+re_classes = r"(\,|.) "
+
+def _get_middle_from_line(line):
+    '''Найти в патенте мидл и вернуть его'''
+    return re.sub(re_date, '', re.sub(re_id, '', line))
+    
+
+def _split_middle_on_classes_and_other(middle):
+    '''Отрезать у мидла класс и вернуть вместе с ним'''
+    try:
+        return re.subn(re_classes, "$$$$", middle, count=1)[0].split("$$$$")
+    except ValueError as e:
+        return ("","")
+
+def _get_city_by_patent_type(determ, middle):
+    '''Получить город в зависимости от типа патента'''
+    if determ == NORMAL:               
+        return extract_city(middle)
+    elif determ == FEW_AUTHORS:
+        return extract_city(middle, 2)
+
+
+def _parse_patents_line_by_line(lines, f):
+    '''Распарсить прочитанные строки. Мы разделяем патент на части'''
+
+    res = []
+    for line in lines[:-1][:LINES]: 
+        
+        for repl in replace_cases:
+            line = line.replace(*repl)
+
+        pat_id = _search_by_regex(re_id, line)
+        pat_date = _search_by_regex(re_date, line)
+
+        middle = _get_middle_from_line(line)
+
+        classes, middle = _split_middle_on_classes_and_other(middle)
+
+        determ = determine_patent(middle)
+
+        log(f"Middle - {middle} {determ_labels[determ]}")
+
+        if len(middle) == 0:
+            continue
+
+        num = re.search(r"\d+", f).group(0)
+        
+        city = _get_city_by_patent_type(determ, middle)
+
+    
+        res.append([num, classes, pat_id, middle, pat_date, city])
+
+    return res
 
 def run_parse(FOLDER, f, year):
     res = []
@@ -213,43 +263,9 @@ def run_parse(FOLDER, f, year):
 
         lines = ff.read().split("\n")
 
-    for line in lines[:-1][:LINES]:
-        
-        for repl in replace_cases:
-            line = line.replace(*repl)
-
-        pat_id = _search_by_regex(re_id, line)
-        pat_date = _search_by_regex(re_date, line)
-
-        middle = re.sub(re_date, '', re.sub(re_id, '', line))
-        
-        determ = determine_patent(middle)
-
-        #log(f"Line {line}")
-        log(f"Middle - {middle} {determ_labels[determ]}")
-
-        re_classes = r"(\,|.) "
-        try:
-            s = re.subn(re_classes, "$$$$", middle, count=1)
-            classes, middle = s[0].split("$$$$")
-        except ValueError as e:
-            pass
-
-        if len(middle) == 0:
-            continue
-
-        num = re.search(r"\d+", f).group(0)
-
-        if determ == NORMAL:               
-            city = extract_city(middle)
-        elif determ == FEW_AUTHORS:
-            city = extract_city(middle, 2)
-
-        res.append([num, classes, pat_id, middle, pat_date, city])
+    res = _parse_patents_line_by_line(lines, f)
 
     write_to_xlsx(f, year, res)
-
-
 
 
 if __name__ == '__main__':
