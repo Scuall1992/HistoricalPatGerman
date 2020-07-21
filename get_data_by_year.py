@@ -2,6 +2,7 @@ import os
 import re
 import xlsxwriter
 from multiprocessing import Process, Pool
+from collections import namedtuple
 
 CITIES_FILENAME = "cities_1.txt"
 NORMAL = 1
@@ -47,20 +48,23 @@ def make_n_gramm(s, n=3):
 
 
 def get_n_gramm(middle, city):
+    '''Считаем совпадения по n-граммам по каждому слову из мидла и потом отдаем с набранными баллами и позицией в строке'''
+    
+    Occurence = namedtuple('Occurence', ['score','city','index'])
+
     res = []
-    b = len(city)
     city = city.lower()
     words = delete_symbols_and_split(middle, ",.")
 
-    balls = dict()
+    score = dict()
 
     for n in range(2, 5): #n-gramm length
         summary = 0
 
         for word in words:
 
-            if word in balls:
-                if len(balls[word]) == 3:
+            if word in score:
+                if len(score[word]) == 3:
                     continue
 
             c = make_n_gramm(city, n)
@@ -74,16 +78,16 @@ def get_n_gramm(middle, city):
                 if i in k:
                     r += 2
 
-            if word in balls:
-                balls[word].append((round(r / summary, 2), word))
+            if word in score:
+                score[word].append((round(r / summary, 2), word))
             else:
-                balls[word] = [(round(r / summary, 2), word)]
+                score[word] = [(round(r / summary, 2), word)]
 
     weights = [1.50, 1.80, 2.0]
 
-    if len(balls) > 0:
+    if len(score) > 0:
 
-        for k, v in balls.items():
+        for k, v in score.items():
 
             ind_res = 99 * 99
             try:
@@ -91,7 +95,7 @@ def get_n_gramm(middle, city):
             except ValueError:
                 pass
 
-            res.extend([(sum([round(v[j][0] * weights[j], 2) for j in range(len(v))]) / len(v), k, ind_res)])
+            res.append( Occurence(sum([round(v[j][0] * weights[j], 2) for j in range(len(v))]) / len(v), k, ind_res) )
 
     return res
 
@@ -112,14 +116,16 @@ def determine_patent(middle):  # 1-normal, 2-international, 3-few_authors
     return NORMAL
 
 
-def extract_city(middle, count=1):
-    '''Вытащить из мидла город или города '''
+
+
+def _filter_cities(k, middle):
+    '''Посчитать n-граммы по каждому городу и отобрать только те, которые выше порога k'''
+    
+    City = namedtuple('City', ['name', 'occurences'])
+
     n_gramm_by_cities = dict()
 
     cities = []
-
-    while "-" in middle:
-        middle = middle.replace("-", "")
 
     for c in get_all_cities():
 
@@ -127,26 +133,45 @@ def extract_city(middle, count=1):
 
         n_gramm_by_cities[c] = get_n_gramm(middle if len(croped) <= 1 else ",".join(croped[1:]), c)
 
-        occurences = list(filter(lambda x: x[0] >= 0.8, n_gramm_by_cities[c]))
+        occurences = list(filter(lambda x: x[0] >= k, n_gramm_by_cities[c]))
 
         if len(occurences) > 0:
-            cities.append((c, occurences))
+            cities.append(City(c, occurences))
+    
+    return cities
 
-    max_index = 0
+def _get_all_cities_by_max_score(cities):
+    '''Забрать только те города баллы которых максимальны'''
 
+    '''Найти max_score'''
+    max_score = 0
     for city, occur in cities:
         for j in occur:
-            if j[0] > max_index:
-                max_index = j[0]
+            if j.score > max_score:
+                max_score = j.score
 
+    '''Найти все города которые равны этому индексу'''
     cit = []
     for city, occur in cities:
         for j in occur:
-            if j[0] == max_index:
-                cit.append((city, j[2]))
+            if j.score == max_score:
+                cit.append((city, j.score))
 
+    return cit
+
+
+KOEF_FOR_N_GRAMM = 0.8
+
+def extract_city(middle, count=1):
+    '''Вытащить из мидла город или города '''
+    
+    cities = _filter_cities(KOEF_FOR_N_GRAMM, middle)
+
+    cit = _get_all_cities_by_max_score(cities)
+    
     min_city = 0
     city_res = ""
+
     if len(cit) > 0 and len(cit[0]) > 1:
         min_city = cit[0][1]
         city_res = cit[0][0]
@@ -164,6 +189,8 @@ def extract_city(middle, count=1):
                 city_res2 = i[0]
 
         city_res = ", ".join([city_res, city_res2])
+    
+    
     log(cit)
     
     return city_res
@@ -223,6 +250,11 @@ def _get_city_by_patent_type(determ, middle):
         return extract_city(middle, 2)
 
 
+def _delete_all_symbol_from_stirng(s, sym):
+    while sym in s:
+        s = s.replace(sym, "")
+    return s
+
 def _parse_patents_line_by_line(lines, f):
     '''Распарсить прочитанные строки. Мы разделяем патент на части'''
 
@@ -248,9 +280,10 @@ def _parse_patents_line_by_line(lines, f):
 
         num = re.search(r"\d+", f).group(0)
         
+        middle = _delete_all_symbol_from_stirng(middle, "-")
+        
         city = _get_city_by_patent_type(determ, middle)
 
-    
         res.append([num, classes, pat_id, middle, pat_date, city])
 
     return res
