@@ -47,8 +47,8 @@ if __name__ == '__main__':
     args = argparse.ArgumentParser()
     args.add_argument("filename", type=str)
 
-    file = args.parse_args().filename
-    # file = 'C:\\Users\\Maria\\Dropbox\\historical German patents\\1925\\pat_Patentblatt_192501.pdf'
+    # file = args.parse_args().filename
+    file = 'C:\\patents\\1926\\pat_Patentblatt_192614.pdf'
 
     try:
         if ".pdf" in file:
@@ -71,7 +71,7 @@ if __name__ == '__main__':
                 if parsed[i][0] == " ":
                     parsed[i] = parsed[i][1:]
 
-            with open(f"{file}.csv", "w", encoding="utf-8") as f:
+            with open(f"{file}1.csv", "w", encoding="utf-8") as f:
                 f.write("\n".join(parsed))
 
     except Exception as e:

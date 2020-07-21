@@ -1,13 +1,40 @@
 import os
 import re
 import xlsxwriter
-
 from multiprocessing import Process, Pool
 
 CITIES_FILENAME = "cities_1.txt"
 NORMAL = 1
 INTERNATIONAL = 2
-FEW_AUTHORS = 3
+FEW_AUTHORS = 3  
+
+determ_labels = {
+    NORMAL : "NORMAL",
+    INTERNATIONAL: "INTERNATIONAL",
+    FEW_AUTHORS: "FEW_AUTHORS"
+}
+
+
+
+
+re_id = r'\d{1,2}(\.|,|-)( )?([A-Z]|Sch|St|Sp)(\.|,|-)( )?\d{5,6}(\.|,|-)'
+re_date = r"[0-9]{1,2}(\.|,| )( )*[0-9]{1,2}(\.| |,)( )*[0-9]{1,2}[^0-9]"
+
+folder = "."
+
+#years = map(str, list(range(1907, 1945 + 1)))
+years = ["1926"]
+
+WEEKS = 100
+LINES = 50
+
+replace_cases = [("2s", "25"), ("2S", "25"), ("Neilin", "Berlin"),
+                 ("Nerlin", "Berlin"), ("¬ ", ''), ("Berlm", "Berlin")]
+
+
+def log(text, DEBUG=False):
+    if DEBUG:
+        print(text)
 
 
 def get_all_cities():
@@ -33,7 +60,7 @@ def get_n_gramm(middle, city):
 
     balls = dict()
 
-    for n in range(2, 5):
+    for n in range(2, 5): #n-gramm length
         summary = 0
 
         for word in words:
@@ -80,39 +107,22 @@ def get_n_gramm(middle, city):
 #     "Par-ris")
 
 def determine_patent(middle):  # 1-normal, 2-international, 3-few_authors
-    res = NORMAL
 
     with open("international_criteria.txt") as f:
         criteria = f.read().split("\n")
         if any([i in middle for i in criteria]):
-            res = INTERNATIONAL
+            return INTERNATIONAL
 
-    return res
+    mark = "u. "
+    i = middle.rfind(mark)
+    if i != -1:
+        if (i+len(mark)) < len(middle) and not middle[i+len(mark)].isdigit():
+            return FEW_AUTHORS
 
-
-def filter_cities(cities_with_word):
-    buf = dict()
-
-    for i in cities_with_word:
-        if i[1][0][1] in buf:
-            buf[i[1][0][1]].append((i[0], *i[1][0]))
-        else:
-            buf[i[1][0][1]] = [(i[0], *i[1][0])]
-
-    res = []
-
-    for k, v in buf.items():
-        if len(v) <= 1:
-            res.extend(v)
-        else:
-            m = max(v, key=lambda x: x[1])
-
-            res.extend(list(filter(lambda x: x == m, v)))
-
-    return res
+    return NORMAL
 
 
-def extract_city(middle):
+def extract_city(middle, count=1):
     n_gramm_by_cities = dict()
 
     cities = []
@@ -146,7 +156,6 @@ def extract_city(middle):
 
     min_city = 0
     city_res = ""
-
     if len(cit) > 0 and len(cit[0]) > 1:
         min_city = cit[0][1]
         city_res = cit[0][0]
@@ -155,68 +164,22 @@ def extract_city(middle):
                 min_city = i[1]
                 city_res = i[0]
 
+    if count == 2 and len(cit) > 1:
+        min_city2 = cit[0][1]
+        city_res2 = cit[0][0]
+        for i in cit:
+            if i[1] != min_city and i[1] < min_city2:
+                min_city2 = i[1]
+                city_res2 = i[0]
+
+        city_res = ", ".join([city_res, city_res2])
+    log(cit)
     # return [num, classes, pat_id, middle, pat_date, city_res]
     return city_res
 
-
-re_id = r'\d{1,2}(\.|,|-)( )?([A-Z]|Sch|St|Sp)(\.|,|-)( )?\d{5,6}(\.|,|-)'
-re_date = r"[0-9]{1,2}(\.|,| )( )*[0-9]{1,2}(\.| |,)( )*[0-9]{1,2}[^0-9]"
-
-folder = "."
-
-#years = map(str, list(range(1907, 1945 + 1)))
-years = ["1926", "1927"]
-
-WEEKS = 100
-LINES = 5000
-
-replace_cases = [("2s", "25"), ("2S", "25"), ("Neilin", "Berlin"),
-                 ("Nerlin", "Berlin"), ("¬ ", ''), ("Berlm", "Berlin")]
-
-
-def run_parse(FOLDER, f, year):
-    res = []
-    with open(os.path.join(FOLDER, f), encoding="utf-8") as ff:
-        lines = ff.read().split("\n")
-
-        for line in lines[:-1][:LINES]:
-            for repl in replace_cases:
-                line = line.replace(*repl)
-
-            pat_id = ""
-            pat_date = ""
-
-            mat_id = re.search(re_id, line)
-            if mat_id is not None:
-                pat_id = mat_id.group(0)
-
-            mat_date = re.search(re_date, line)
-            if mat_date is not None:
-                pat_date = mat_date.group(0)
-
-            middle = re.sub(re_date, '', re.sub(re_id, '', line))
-
-            if determine_patent(middle) != NORMAL:
-                continue
-
-            re_classes = r"(\,|.) "
-
-            try:
-                s = re.subn(re_classes, "$$$$", middle, count=1)
-                classes, middle = s[0].split("$$$$")
-            except ValueError as e:
-                pass
-
-            num = re.search(r"\d+", f).group(0)
-
-            if len(middle) == 0:
-                continue
-
-            # return [num, classes, pat_id, middle, pat_date, city_res]
-
-            res.append([num, classes, pat_id, middle, pat_date, extract_city(middle)])
-
+def write_to_xlsx(f, year, res):
     # Create a workbook and add a worksheet.
+    log(f"Write to file {f}_parsed.xlsx")
     workbook = xlsxwriter.Workbook(os.path.join("parsed", year, f"{f}_parsed.xlsx"))
 
     worksheet = workbook.add_worksheet()
@@ -236,20 +199,74 @@ def run_parse(FOLDER, f, year):
     workbook.close()
 
 
+def _search_by_regex(pattern, line):
+    mat_id = re.search(pattern, line)
+    if mat_id is not None:
+        return mat_id.group(0)
+    return ""
+
+def run_parse(FOLDER, f, year):
+    res = []
+    filename_patent = os.path.join(FOLDER, f)
+    with open(filename_patent, encoding="utf-8") as ff:
+        log(f"Start parse {filename_patent}")
+
+        lines = ff.read().split("\n")
+
+    for line in lines[:-1][:LINES]:
+        
+        for repl in replace_cases:
+            line = line.replace(*repl)
+
+        pat_id = _search_by_regex(re_id, line)
+        pat_date = _search_by_regex(re_date, line)
+
+        middle = re.sub(re_date, '', re.sub(re_id, '', line))
+        
+        determ = determine_patent(middle)
+
+        #log(f"Line {line}")
+        log(f"Middle - {middle} {determ_labels[determ]}")
+
+        re_classes = r"(\,|.) "
+        try:
+            s = re.subn(re_classes, "$$$$", middle, count=1)
+            classes, middle = s[0].split("$$$$")
+        except ValueError as e:
+            pass
+
+        if len(middle) == 0:
+            continue
+
+        num = re.search(r"\d+", f).group(0)
+
+        if determ == NORMAL:               
+            city = extract_city(middle)
+        elif determ == FEW_AUTHORS:
+            city = extract_city(middle, 2)
+
+        res.append([num, classes, pat_id, middle, pat_date, city])
+
+    write_to_xlsx(f, year, res)
+
+
+
+
 if __name__ == '__main__':
     parsed_files = os.listdir("parsed")
-    with Pool(10) as p:
-        args = []
-        for y in years:
-            if not os.path.exists(os.path.join("parsed", y)):
-                os.mkdir(os.path.join("parsed", y))
-            FOLDER = os.path.join(folder, y)
+    # with Pool(10) as p:
+    args = []
+    for y in years:
+        if not os.path.exists(os.path.join("parsed", y)):
+            os.mkdir(os.path.join("parsed", y))
+        FOLDER = os.path.join(folder, y)
 
-            for f in list(filter(lambda x: "result" in x, os.listdir(FOLDER)))[:WEEKS]:
+        for f in list(filter(lambda x: "result" in x, os.listdir(FOLDER)))[:WEEKS]:
+            if "192615" in f:
 
                 if all([f not in pf for pf in parsed_files]):
 
                     args.append((FOLDER, f, y))
 
-
-        p.starmap(run_parse, args)
+    run_parse(*args[0])
+    # p.starmap(run_parse, args)
