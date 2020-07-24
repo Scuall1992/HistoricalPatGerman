@@ -26,8 +26,8 @@ DETERM_LABELS = {
 
 folder = "."
 
-#years = map(str, list(range(1907, 1945 + 1)))
-years = ["1926"]
+#YEARS = map(str, list(range(1907, 1945 + 1)))
+YEARS = ["1926"]
 
 WEEKS = 100
 LINES = 500
@@ -199,7 +199,7 @@ def extract_city(middle: str, count=1) -> str:
         min_city_score2 = cit[0].score
         city_res2 = ""
         for i in cit:
-            if city_res2 != city_res and i.score < min_city_score2:
+            if i.city != city_res and i.score < min_city_score2:
                 min_city_score2 = i.score
                 city_res2 = i.city
 
@@ -314,7 +314,7 @@ if __name__ == '__main__':
     parsed_files = os.listdir("parsed")
     # with Pool(10) as p:
     args = []
-    for y in years:
+    for y in YEARS:
         if not os.path.exists(os.path.join("parsed", y)):
             os.mkdir(os.path.join("parsed", y))
         FOLDER = os.path.join(folder, y)
