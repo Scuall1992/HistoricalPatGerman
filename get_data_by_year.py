@@ -1,15 +1,24 @@
+from typing import List, Tuple
 import os
 import re
 import xlsxwriter
 from multiprocessing import Process, Pool
 from collections import namedtuple
 
+
+re_id = r'\d{1,2}(\.|,|-)( )?([A-Z]|Sch|St|Sp)(\.|,|-)( )?\d{5,6}(\.|,|-)'
+re_date = r"[0-9]{1,2}(\.|,| )( )*[0-9]{1,2}(\.| |,)( )*[0-9]{1,2}[^0-9]"
+re_classes = r"(\,|.) "
+
+WEIGHTS = [1.50, 1.80, 2.0] # for n-gramm compare
+
 CITIES_FILENAME = "cities_1.txt"
 NORMAL = 1
 INTERNATIONAL = 2
 FEW_AUTHORS = 3  
+KOEF_FOR_N_GRAMM = 0.8
 
-determ_labels = {
+DETERM_LABELS = {
     NORMAL : "NORMAL",
     INTERNATIONAL: "INTERNATIONAL",
     FEW_AUTHORS: "FEW_AUTHORS"
@@ -21,44 +30,39 @@ folder = "."
 years = ["1926"]
 
 WEEKS = 100
-LINES = 50
+LINES = 500
 
-replace_cases = [("2s", "25"), ("2S", "25"), ("Neilin", "Berlin"),
+REPLACE_CASES = [("2s", "25"), ("2S", "25"), ("Neilin", "Berlin"),
                  ("Nerlin", "Berlin"), ("¬ ", ''), ("Berlm", "Berlin")]
 
 
-def log(text, DEBUG=False):
+Occurence = namedtuple('Occurence', ['score','word','index', 'city'])
+PatentData = namedtuple("PatentData", ["num", "classes", "id", "middle", "date", "city"])
+
+
+def log(text, DEBUG=False) -> None:
     if DEBUG:
         print(text)
 
-
-def get_all_cities():
+def get_all_cities() -> List[str]:
     with open(CITIES_FILENAME, encoding="utf-8") as f:
         return set([i.strip() for i in f.read().split("\n")])
 
-
-def delete_symbols_and_split(middle, symbols):
+def delete_symbols_and_split(middle: str, symbols: List[str]) -> List[str]:
+    '''Очищаем мидл от лишних символов'''
     table = str.maketrans('', '', symbols)
     return [i for i in [w.translate(table) for w in middle.strip().lower().split(" ")] if len(i) > 0]
 
-
-def make_n_gramm(s, n=3):
+def make_n_gramm(s: str, n=3) -> List[str]:
+    '''Создать из строки n-граммы по заданному количеству'''
     s = s.lower()
     return [s[i:i + n] for i in range(len(s) - n + 1)]
 
-
-def get_n_gramm(middle, city):
-    '''Считаем совпадения по n-граммам по каждому слову из мидла и потом отдаем с набранными баллами и позицией в строке'''
-    
-    Occurence = namedtuple('Occurence', ['score','city','index'])
-
-    res = []
-    city = city.lower()
-    words = delete_symbols_and_split(middle, ",.")
-
+def evaluate_scores(words: List[str], city: str, n_gramm_min=2, n_gramm_max=5) -> dict:
+    '''Делаем подсчет баллов по заданным n-граммам и потом суммируем умножая на веса '''
     score = dict()
 
-    for n in range(2, 5): #n-gramm length
+    for n in range(n_gramm_min, n_gramm_max):
         summary = 0
 
         for word in words:
@@ -82,26 +86,33 @@ def get_n_gramm(middle, city):
                 score[word].append((round(r / summary, 2), word))
             else:
                 score[word] = [(round(r / summary, 2), word)]
+    return score
 
-    weights = [1.50, 1.80, 2.0]
+def get_n_gramm(middle: str, city: str) -> List[Occurence]:
+    '''Считаем совпадения по n-граммам по каждому слову из мидла и потом отдаем с набранными баллами и позицией в строке'''
+    
+    res = []
+    city = city.lower()
+    words = delete_symbols_and_split(middle, ",.")
+
+    score = evaluate_scores(words, city)
 
     if len(score) > 0:
 
-        for k, v in score.items():
+        for word, v in score.items():
 
             ind_res = 99 * 99
             try:
-                ind_res = middle.lower().index(k)
+                ind_res = middle.lower().index(word)
             except ValueError:
                 pass
 
-            res.append( Occurence(sum([round(v[j][0] * weights[j], 2) for j in range(len(v))]) / len(v), k, ind_res) )
-
+            res.append( Occurence(sum([round(v[j][0] * WEIGHTS[j], 2) for j in range(len(v))]) / len(v), word, ind_res, city) )
+    
     return res
 
-
-def determine_patent(middle):  # 1-normal, 2-international, 3-few_authors
-
+def determine_patent(middle: str) -> int:  # 1-normal, 2-international, 3-few_authors
+    '''Вернуть тип патента'''
     with open("international_criteria.txt") as f:
         criteria = f.read().split("\n")
         if any([i in middle for i in criteria]):
@@ -115,14 +126,9 @@ def determine_patent(middle):  # 1-normal, 2-international, 3-few_authors
 
     return NORMAL
 
-
-
-
-def _filter_cities(k, middle):
-    '''Посчитать n-граммы по каждому городу и отобрать только те, которые выше порога k'''
+def _filter_cities(score_limit: float, middle: str) -> List[List[Occurence]]:
+    '''Посчитать n-граммы по каждому городу и отобрать только те, которые выше порога score_limit'''
     
-    City = namedtuple('City', ['name', 'occurences'])
-
     n_gramm_by_cities = dict()
 
     cities = []
@@ -132,61 +138,70 @@ def _filter_cities(k, middle):
         croped = middle.split(",")
 
         n_gramm_by_cities[c] = get_n_gramm(middle if len(croped) <= 1 else ",".join(croped[1:]), c)
-
-        occurences = list(filter(lambda x: x[0] >= k, n_gramm_by_cities[c]))
+        
+        occurences = list(filter(lambda x: x[0] >= score_limit, n_gramm_by_cities[c]))
 
         if len(occurences) > 0:
-            cities.append(City(c, occurences))
+            cities.extend(occurences)
     
     return cities
 
-def _get_all_cities_by_max_score(cities):
+def find_next_max(cities: List[Occurence], last_max: float) -> float:
+    '''Найти следующий максимум, который меньше last_max'''
+    result = 0
+    for occur in cities:
+        if occur.score < last_max and occur.score > result:
+            result = occur.score
+
+    return result
+
+def _get_all_cities_by_max_score(cities: List[Occurence]) -> List[Occurence]:
     '''Забрать только те города баллы которых максимальны'''
 
-    '''Найти max_score'''
-    max_score = 0
-    for city, occur in cities:
-        for j in occur:
-            if j.score > max_score:
-                max_score = j.score
+    '''Найти max_score'ы'''
+    max_score = find_next_max(cities, 9999)
+    max_score2 = find_next_max(cities, max_score)
+    max_score3 = find_next_max(cities, max_score2)
 
     '''Найти все города которые равны этому индексу'''
     cit = []
-    for city, occur in cities:
-        for j in occur:
-            if j.score == max_score:
-                cit.append((city, j.score))
+    for occur in cities:
+        if any([occur.score == sc for sc in (max_score2, max_score, max_score3) ]): #Если соответствует хоть какому-нибудь максимуму. Городов может быть больше 3
+            cit.append(occur)
 
     return cit
 
-
-KOEF_FOR_N_GRAMM = 0.8
-
-def extract_city(middle, count=1):
+def extract_city(middle: str, count=1) -> str:
     '''Вытащить из мидла город или города '''
     
     cities = _filter_cities(KOEF_FOR_N_GRAMM, middle)
 
     cit = _get_all_cities_by_max_score(cities)
     
-    min_city = 0
+    min_city_index = 0
     city_res = ""
 
-    if len(cit) > 0 and len(cit[0]) > 1:
-        min_city = cit[0][1]
-        city_res = cit[0][0]
+    '''Искать то, что максимально близко к началу строки'''
+    if count == 1 and len(cit) > 0:
+        min_city_index = cit[0].index
+        city_res = cit[0].city
         for i in cit:
-            if i[1] < min_city:
-                min_city = i[1]
-                city_res = i[0]
+            if i.index < min_city_index:
+                min_city_index = i.index
+                city_res = i.city
 
-    if count == 2 and len(cit) > 1:
-        min_city2 = cit[0][1]
-        city_res2 = cit[0][0]
+    #'''Если хотят два, а у нас есть только один'''
+    elif count == 2 and len(cit) == 1:
+        city_res = f"{cit[0].city}, Not recognized"
+
+    #'''Второй город ищем по максимальному кол-ву набранных баллов, но такой, чтобы он не совпадал с первым'''
+    elif count == 2 and len(cit) > 1:
+        min_city_score2 = cit[0].score
+        city_res2 = ""
         for i in cit:
-            if i[1] != min_city and i[1] < min_city2:
-                min_city2 = i[1]
-                city_res2 = i[0]
+            if city_res2 != city_res and i.score < min_city_score2:
+                min_city_score2 = i.score
+                city_res2 = i.city
 
         city_res = ", ".join([city_res, city_res2])
     
@@ -195,7 +210,38 @@ def extract_city(middle, count=1):
     
     return city_res
 
-def write_to_xlsx(f, year, res):
+def _search_by_regex(pattern: str, line: str) -> str:
+    '''Вернуть то, что подходит под паттерн регулярки'''
+    mat_id = re.search(pattern, line)
+    if mat_id is not None:
+        return mat_id.group(0)
+    return ""
+
+def _get_middle_from_line(line: str) -> str:
+    '''Найти в патенте мидл и вернуть его'''
+    return re.sub(re_date, '', re.sub(re_id, '', line))
+    
+def _split_middle_on_classes_and_other(middle: str) -> Tuple(str, str):
+    '''Отрезать у мидла класс и вернуть вместе с ним'''
+    try:
+        return re.subn(re_classes, "$$$$", middle, count=1)[0].split("$$$$")
+    except ValueError:
+        return ("","")
+
+def _get_city_by_patent_type(determ: int, middle: str) -> str:
+    '''Получить город в зависимости от типа патента'''
+    if determ == NORMAL:               
+        return extract_city(middle)
+    elif determ == FEW_AUTHORS:
+        return extract_city(middle, 2)
+
+def _delete_all_symbol_from_stirng(s: str, sym: str) -> str:
+    '''Удаляй пока не останется этого символа. Вроде бы сработало бы с одного вызова, но лучше перестраховаться'''
+    while sym in s:
+        s = s.replace(sym, "")
+    return s
+
+def write_to_xlsx(f: str, year: int, res: List[PatentData]) -> None:
     '''Записать данные в ексель'''
     # Create a workbook and add a worksheet.
     log(f"Write to file {f}_parsed.xlsx")
@@ -217,54 +263,16 @@ def write_to_xlsx(f, year, res):
 
     workbook.close()
 
-
-def _search_by_regex(pattern, line):
-    '''Вернуть то, что подходит под паттерн регулярки'''
-    mat_id = re.search(pattern, line)
-    if mat_id is not None:
-        return mat_id.group(0)
-    return ""
-
-
-re_id = r'\d{1,2}(\.|,|-)( )?([A-Z]|Sch|St|Sp)(\.|,|-)( )?\d{5,6}(\.|,|-)'
-re_date = r"[0-9]{1,2}(\.|,| )( )*[0-9]{1,2}(\.| |,)( )*[0-9]{1,2}[^0-9]"
-re_classes = r"(\,|.) "
-
-def _get_middle_from_line(line):
-    '''Найти в патенте мидл и вернуть его'''
-    return re.sub(re_date, '', re.sub(re_id, '', line))
-    
-
-def _split_middle_on_classes_and_other(middle):
-    '''Отрезать у мидла класс и вернуть вместе с ним'''
-    try:
-        return re.subn(re_classes, "$$$$", middle, count=1)[0].split("$$$$")
-    except ValueError as e:
-        return ("","")
-
-def _get_city_by_patent_type(determ, middle):
-    '''Получить город в зависимости от типа патента'''
-    if determ == NORMAL:               
-        return extract_city(middle)
-    elif determ == FEW_AUTHORS:
-        return extract_city(middle, 2)
-
-
-def _delete_all_symbol_from_stirng(s, sym):
-    while sym in s:
-        s = s.replace(sym, "")
-    return s
-
-def _parse_patents_line_by_line(lines, f):
+def _parse_patents_line_by_line(lines: List[str], f: str) -> List[PatentData]: 
     '''Распарсить прочитанные строки. Мы разделяем патент на части'''
 
     res = []
     for line in lines[:-1][:LINES]: 
         
-        for repl in replace_cases:
+        for repl in REPLACE_CASES:
             line = line.replace(*repl)
 
-        pat_id = _search_by_regex(re_id, line)
+        pat_id = _search_by_regex(re_id, line) 
         pat_date = _search_by_regex(re_date, line)
 
         middle = _get_middle_from_line(line)
@@ -273,7 +281,7 @@ def _parse_patents_line_by_line(lines, f):
 
         determ = determine_patent(middle)
 
-        log(f"Middle - {middle} {determ_labels[determ]}")
+        log(f"Middle - {middle} {DETERM_LABELS[determ]}")
 
         if len(middle) == 0:
             continue
@@ -284,11 +292,12 @@ def _parse_patents_line_by_line(lines, f):
         
         city = _get_city_by_patent_type(determ, middle)
 
-        res.append([num, classes, pat_id, middle, pat_date, city])
+        res.append(PatentData(num, classes, pat_id, middle, pat_date, city))
 
     return res
 
-def run_parse(FOLDER, f, year):
+def run_parse(FOLDER: str, f: str, year: int) -> None:
+    '''Эту функцию можно вызывать из потоков'''
     res = []
     filename_patent = os.path.join(FOLDER, f)
     with open(filename_patent, encoding="utf-8") as ff:
