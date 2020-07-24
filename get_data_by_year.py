@@ -30,7 +30,7 @@ folder = "."
 YEARS = ["1926"]
 
 WEEKS = 100
-LINES = 500
+LINES = 50
 
 REPLACE_CASES = [("2s", "25"), ("2S", "25"), ("Neilin", "Berlin"),
                  ("Nerlin", "Berlin"), ("¬ ", ''), ("Berlm", "Berlin")]
@@ -221,7 +221,7 @@ def _get_middle_from_line(line: str) -> str:
     '''Найти в патенте мидл и вернуть его'''
     return re.sub(re_date, '', re.sub(re_id, '', line))
     
-def _split_middle_on_classes_and_other(middle: str) -> Tuple(str, str):
+def _split_middle_on_classes_and_other(middle: str) -> Tuple[str, str]:
     '''Отрезать у мидла класс и вернуть вместе с ним'''
     try:
         return re.subn(re_classes, "$$$$", middle, count=1)[0].split("$$$$")
