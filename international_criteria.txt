@@ -6,6 +6,7 @@ Pat.°Anw
 Pat.° Anwälte
 Pat,° Anwälte
 Pat.-Anw
+Pat,«An,v
 Pat,-Anw
 Nertr
 Vertr
@@ -13,3 +14,4 @@ Veitr
 Veitl
 Vcrtr
 Verir
+Vertl

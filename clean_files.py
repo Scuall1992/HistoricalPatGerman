@@ -90,6 +90,7 @@ for file in files:
         # join list in string
         buf = "\n".join(buf)
 
+        res = ""
         # delete eterlungen from file
         for case in a:
             if buf.count(case) > 0:

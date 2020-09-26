@@ -51,7 +51,7 @@ with open("cities_parse2.txt", "r", encoding="utf-8") as g:
 
 
     for c in enumerate(res):
-
+        pass
 
 
     # with open("cities_parse3.txt", "w", encoding="utf-8") as f:

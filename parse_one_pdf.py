@@ -47,8 +47,8 @@ if __name__ == '__main__':
     args = argparse.ArgumentParser()
     args.add_argument("filename", type=str)
 
-    # file = args.parse_args().filename
-    file = 'C:\\patents\\1926\\pat_Patentblatt_192614.pdf'
+    file = args.parse_args().filename
+    #file = 'C:\\patents\\1926\\pat_Patentblatt_192614.pdf'
 
     try:
         if ".pdf" in file:
