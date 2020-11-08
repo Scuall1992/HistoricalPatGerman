@@ -26,7 +26,7 @@ DETERM_LABELS = {
 folder = "."
 
 # YEARS = map(str, list(range(1907, 1945 + 1)))
-YEARS = ["1926", "1927", "1928"]
+YEARS = ["1926"]
 
 WEEKS = 100
 LINES = 500
@@ -225,6 +225,13 @@ def extract_city(middle: str, count=1) -> str:
         city_res = ", ".join([city_res, city_res2])
 
     log(cit)
+
+    if "-" in city_res:
+        a,b = city_res.split("-")
+        a = a.capitalize()
+        b = b.capitalize()
+
+        city_res = "-".join([a,b])
 
     return city_res
 
