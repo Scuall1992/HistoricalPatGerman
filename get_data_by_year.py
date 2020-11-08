@@ -26,13 +26,13 @@ DETERM_LABELS = {
 folder = "."
 
 # YEARS = map(str, list(range(1907, 1945 + 1)))
-YEARS = ["2000"]
+YEARS = ["1926", "1927", "1928"]
 
 WEEKS = 100
 LINES = 500
 
 REPLACE_CASES = [("2s", "25"), ("2S", "25"), ("Neilin", "Berlin"),
-                 ("Nerlin", "Berlin"), ("¬ ", ''), ("Berlm", "Berlin")]
+                 ("Nerlin", "Berlin"), ("¬ ", ''), ("Berlm", "Berlin"), ("Beilin", "Berlin")]
 
 Occurence = namedtuple('Occurence', ['score', 'word', 'index', 'city'])
 PatentData = namedtuple("PatentData", ["num", "classes", "id", "middle", "date", "city"])
@@ -255,7 +255,7 @@ def _get_city_by_patent_type(determ: int, middle: str) -> str:
     if determ == NORMAL:
         return extract_city(middle)
     elif determ == FEW_AUTHORS:
-        return extract_city(middle, 2)
+        return extract_city(middle)
     # else:
     #     return extract_city(middle)
 

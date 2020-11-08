@@ -3269,7 +3269,6 @@ Eitorf
 Eitting
 Eixen
 Elba
-Elbe
 Elbe-Parey
 Elben
 Elbenau
@@ -8096,7 +8095,6 @@ Luhden
 Luhe-Wildenau
 Luhnstedt
 Luisenthal
-Lund
 Lunden
 Lundenburg
 Lungau
@@ -8728,7 +8726,6 @@ Mittelneufnach
 Mittelnkirchen
 Mittelpöllnitz
 Mittelreidenbach
-Mittelsinn
 Mittelsteiermark
 Mittelstenahe
 Mittelstetten
@@ -13393,7 +13390,6 @@ Thörlingen
 Thörnich
 Thüngen
 Thüngersheim
-Thür
 Thüringen
 Thüringenhausen
 Thüringgau
@@ -13631,7 +13627,6 @@ Uckerfelde
 Uckerland
 Uckermark
 Udenheim
-Uder
 Udestedt
 Udine
 Udler

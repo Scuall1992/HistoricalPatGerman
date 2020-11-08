@@ -14,7 +14,7 @@ def run_script_folder(filename):
 
 if __name__ == '__main__':
     FOLDER = "."
-    years = ["2000"]
+    years = ["1926", "1927", "1928"]
 
     # for y in years:
         # [run_script(os.path.join(FOLDER, y, i)) for i in os.listdir(os.path.join(FOLDER, y)) if i.endswith('.pdf')]

@@ -14,13 +14,13 @@ LENGTH_OF_LINE = 45  # if less, then add to previous line
 args = argparse.ArgumentParser()
 args.add_argument("filename", type=str)
 
-# FOLDER = r"C:\patents\1928"
-FOLDER = args.parse_args().filename
+FOLDER = "1928"
+# FOLDER = args.parse_args().filename
 
 lines = []
 
 for i in os.listdir(FOLDER):
-    if ".csv" in i:
+    if ".csv" in i and "result" not in i:
         with open(os.path.join(FOLDER, i), encoding="utf-8") as f:
             lines.clear()
             data = f.read().split("\n")
@@ -37,7 +37,7 @@ for i in os.listdir(FOLDER):
 
 
 a = ["Erteilungen.", "Erteilungen/", "Versagungen.", "Erteilungen*)", "Erteilungen.*)", "Erteilungen')", "Erteilungen",
-     "Erleilungen'", "ErleAngen'", "hierunter angegebenen"]
+     "Erleilungen'", "ErleAngen'", "hierunter angegebenen", "rteilungen", "Patente erteilt"]
 
 b = ["Anmeldungen.", "Anmelllungen.", "von Anmeldungen", "van Anmelllumen", "Anmelüuugen", "von Anmelllungen",
      "von Anmeldunzen"]
@@ -47,12 +47,12 @@ b = ["Anmeldungen.", "Anmelllungen.", "von Anmeldungen", "van Anmelllumen", "Anm
 files = []
 
 for i in os.listdir(FOLDER):
-    if ".csv" in i:
-        with open(os.path.join(FOLDER, i), encoding="utf-8") as f:
-            data = f.read()
+    if ".csv" in i and "result" not in i:
+        # with open(os.path.join(FOLDER, i), encoding="utf-8") as f:
+        #     data = f.read()
 
-        if any([data.count(i) == 1 for i in a]) and any([data.count(i) == 1 for i in b]):
-            files.append(i)
+        # if any([data.count(i) == 1 for i in a]) and any([data.count(i) == 1 for i in b]):
+        files.append(i)
 
 with open("replace_cases", encoding="utf-8") as g:
     cases = g.read().split("\n")
@@ -60,14 +60,17 @@ with open("replace_cases", encoding="utf-8") as g:
 for file in files:
     with open(os.path.join(FOLDER, file), encoding="utf-8") as g:
         data = g.read()
-
+        anmel = data
         for j in cases:
             data = data.replace(*j.split(";"))
 
-        for case in b:
-            if data.count(case) > 0:
-                anmel = data.split(case)[0]
-                break
+        if "unbefugte Benutzung geschützt" in data:
+            anmel = data.split("unbefugte Benutzung geschützt")[1]
+        else:
+            for case in b:
+                if data.count(case) > 0:
+                    anmel = data.split(case)[0]
+                    break
 
         anmel = anmel.split("\n")
         buf = []
@@ -78,6 +81,9 @@ for file in files:
 
             if anmel[i].startswith(", "):
                 anmel[i] = anmel[i][2:]
+
+            if not anmel[i]:
+                continue
 
             if not anmel[i][0].isalpha() and anmel[i][0] != "'":
                 buf.append(anmel[i])
@@ -91,12 +97,14 @@ for file in files:
         buf = "\n".join(buf)
 
         res = ""
+
+        
         # delete eterlungen from file
         for case in a:
             if buf.count(case) > 0:
-                res = buf.split(case)[0]
+                res = buf.split(case)[-2]
                 break
-
+        
         lines = res.split("\n")
         res = []
         for i in lines:
