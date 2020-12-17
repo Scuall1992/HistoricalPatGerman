@@ -26,7 +26,7 @@ DETERM_LABELS = {
 folder = "."
 
 # YEARS = map(str, list(range(1907, 1945 + 1)))
-YEARS = ["1926"]
+YEARS = ["1938", "1939"]
 
 WEEKS = 100
 LINES = 500
@@ -38,14 +38,23 @@ Occurence = namedtuple('Occurence', ['score', 'word', 'index', 'city'])
 PatentData = namedtuple("PatentData", ["num", "classes", "id", "middle", "date", "city"])
 
 
-def log(text, DEBUG=False) -> None:
+def log(text, DEBUG=True) -> None:
     if DEBUG:
         print(text)
 
+all_cities = None 
 
 def get_all_cities() -> List[str]:
+    global all_cities
+    
+    if all_cities:
+        return all_cities
+    
+    log("get_all_cities")
     with open(CITIES_FILENAME, encoding="utf-8") as f:
-        return set([i.strip() for i in f.read().split("\n")])
+        all_cities = set([i.strip() for i in f.read().split("\n")])
+    
+    return all_cities
 
 
 def delete_symbols_and_split(middle: str, symbols: List[str]) -> List[str]:
@@ -224,15 +233,13 @@ def extract_city(middle: str, count=1) -> str:
 
         city_res = ", ".join([city_res, city_res2])
 
-    log(cit)
 
     if "-" in city_res:
-        a,b = city_res.split("-")
-        a = a.capitalize()
-        b = b.capitalize()
+        city_res = "-".join([i.capitalize() for i in city_res.split("-")])
+    else:
+        city_res = city_res.capitalize()
 
-        city_res = "-".join([a,b])
-
+    log(city_res)
     return city_res
 
 
@@ -302,7 +309,7 @@ def _parse_patents_line_by_line(lines: List[str], f: str) -> List[PatentData]:
 
     res = []
     for line in lines[:-1][:LINES]:
-
+        log(f"{line}")
         for repl in REPLACE_CASES:
             line = line.replace(*repl)
 
@@ -326,12 +333,18 @@ def _parse_patents_line_by_line(lines: List[str], f: str) -> List[PatentData]:
 
         city = _get_city_by_patent_type(determ, middle)
 
-        res.append(PatentData(num, classes, pat_id, middle, pat_date, city.capitalize()))
+        patent_data = PatentData(num, classes, pat_id, middle, pat_date, city)
+        
+        log(patent_data)
+        
+        res.append(patent_data)
 
     return res
 
 
 def run_parse(FOLDER: str, f: str, year: int) -> None:
+    log(f, datetime.datetime.now())
+    
     '''Эту функцию можно вызывать из потоков'''
     res = []
     filename_patent = os.path.join(FOLDER, f)
@@ -344,10 +357,11 @@ def run_parse(FOLDER: str, f: str, year: int) -> None:
 
     write_to_xlsx(f, year, res)
 
+    log(f, datetime.datetime.now())
+
 import datetime
 
 if __name__ == '__main__':
-    print(datetime.datetime.now())
     parsed_files = os.listdir("parsed")
     with Pool(2) as p:
       args = []
@@ -361,7 +375,5 @@ if __name__ == '__main__':
                 if all([f not in pf for pf in parsed_files]):
                     args.append((FOLDER, f, y))
 
-    #run_parse(*args[0])
-      print(datetime.datetime.now())
       p.starmap(run_parse, args)
 

@@ -14,7 +14,7 @@ LENGTH_OF_LINE = 45  # if less, then add to previous line
 args = argparse.ArgumentParser()
 args.add_argument("filename", type=str)
 
-FOLDER = "1928"
+FOLDER = "1939"
 # FOLDER = args.parse_args().filename
 
 lines = []
