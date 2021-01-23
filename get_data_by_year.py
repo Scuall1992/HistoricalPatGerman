@@ -26,7 +26,7 @@ DETERM_LABELS = {
 folder = "."
 
 # YEARS = map(str, list(range(1907, 1945 + 1)))
-YEARS = ["1938", "1939"]
+YEARS = ["1934"]
 
 WEEKS = 100
 LINES = 500
