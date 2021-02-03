@@ -26,7 +26,7 @@ DETERM_LABELS = {
 folder = "."
 
 # YEARS = map(str, list(range(1907, 1945 + 1)))
-YEARS = ["1934"]
+YEARS = ["1940"]
 
 WEEKS = 100
 LINES = 500
@@ -362,12 +362,15 @@ def run_parse(FOLDER: str, f: str, year: int) -> None:
 import datetime
 
 if __name__ == '__main__':
-    parsed_files = os.listdir("parsed")
+    parsed_files = []
     with Pool(2) as p:
       args = []
       for y in YEARS:
         if not os.path.exists(os.path.join("parsed", y)):
             os.mkdir(os.path.join("parsed", y))
+        
+        parsed_files.extend(os.listdir(os.path.join("parsed", y)))
+
         FOLDER = os.path.join(folder, y)
 
         for f in list(filter(lambda x: "result" in x, os.listdir(FOLDER)))[:WEEKS]:
